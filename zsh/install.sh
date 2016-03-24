@@ -1,7 +1,6 @@
 #!/bin/sh
 
-# set zsh as default
-chsh -s /bin/zsh
+echo '> oh-my-zsh'
 
 OHMYZSH_REPO=git://github.com/robbyrussell/oh-my-zsh.git
 
