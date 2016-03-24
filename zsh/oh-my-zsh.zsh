@@ -1,12 +1,3 @@
-ZSH_THEME="avit"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
-# bindkey '^ ' autosuggest-accept
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
