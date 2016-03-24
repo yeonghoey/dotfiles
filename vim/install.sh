@@ -1,4 +1,5 @@
 #!/bin/sh
+
 VUNDLE_REPO=https://github.com/VundleVim/Vundle.vim.git
 VUNDLE_PATH=~/.vim/bundle/Vundle.vim
 VUNDLE_FILE=~/.vundles
