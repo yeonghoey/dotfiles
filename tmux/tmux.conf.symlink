@@ -1,0 +1,70 @@
+# prefix: C-a
+set-option -g default-shell /bin/zsh
+
+set -g prefix C-a
+bind C-a send-prefix
+unbind C-b
+
+# refresh
+bind r source-file ~/.tmux.conf
+
+# removing sequencial key delay
+set -s escape-time 1
+
+# base-index: 1
+set  -g base-index 1
+setw -g pane-base-index 1
+
+# session traversal
+bind -r ( switch-client -p
+bind -r ) switch-client -n
+
+# window/pane bindings
+bind | split-window -h -c "#{pane_current_path}"
+bind _ split-window -v -c "#{pane_current_path}"
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# color settings
+set -g default-terminal "screen-256color"
+set -g monitor-activity on
+set -g visual-activity on
+set -g status-fg white
+set -g status-bg black
+set -g window-status-fg cyan
+set -g window-status-bg default
+set -g window-status-attr dim
+set -g window-status-current-fg white
+set -g window-status-current-bg red
+set -g window-status-current-attr bright
+set -g pane-border-fg green
+set -g pane-border-bg black
+set -g pane-active-border-fg white
+set -g pane-active-border-bg yellow
+set -g message-fg white
+set -g message-bg black
+set -g message-attr bright
+
+# status customizing
+set -g status-left-length 40
+set -g status-left "#[fg=green]session: #S #[fg=yellow]#I #[fg=cyan]#P"
+set -g status-utf8 on
+set -g status-interval 60
+set -g status-justify centre
+
+set -g mouse
+
+# use vi key-bindings
+setw -g mode-keys vi
+bind -t vi-copy Enter copy-pipe "cat | pbcopy"
+
+# shortcut for sync-panes toggle
+bind C-s set synchronize-panes
