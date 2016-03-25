@@ -1,19 +1,32 @@
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM="$ZSH/custom"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ZSH_THEME="avit"
+plugins=(git zsh-autosuggestions)
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# ----------------------------------------------------------------------------
+OHMYZSH_REPO=git://github.com/robbyrussell/oh-my-zsh.git
+if [[ ! -a $ZSH ]]
+then
+    git clone $OHMYZSH_REPO $ZSH
+fi
+
+AUTOSUGGESTIONS_REPO=git://github.com/zsh-users/zsh-autosuggestions
+AUTOSUGGESTIONS_PATH=$ZSH_CUSTOM/plugins/zsh-autosuggestions
+if [[ ! -a $AUTOSUGGESTIONS_PATH ]]
+then
+    git clone $AUTOSUGGESTIONS_REPO $AUTOSUGGESTIONS_PATH
+fi
+source $ZSH/oh-my-zsh.sh
+# ----------------------------------------------------------------------------
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+bindkey '^ ' autosuggest-accept
+
+
+# TODO: move to other files
 eval "$(thefuck --alias)"
 eval $(docker-machine env default)
 
