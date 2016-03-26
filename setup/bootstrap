@@ -3,14 +3,17 @@
 # bootstrap installs things.
 
 set -e
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+source setup/funcs.sh
 
 chsh -s /bin/zsh
 
 echo ''
 
-./gitconfig
-./dotfiles
-./dependencies
+setup/gitconfig
+setup/dotfiles
+setup/dependencies
 
 echo ''
 echo '  All finished!'
