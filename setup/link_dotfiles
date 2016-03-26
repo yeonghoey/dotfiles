@@ -3,17 +3,9 @@
 # link foo.symlink to $HOME/.foo
 
 set -e
-
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
-
-info () {
-  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
-}
-
-success () {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
-}
+source setup/funcs.sh
 
 link_file () {
   local src=$1 dst=$2
