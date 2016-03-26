@@ -82,9 +82,7 @@ link_file () {
   fi
 }
 
-
-
-link_dotfiles () {
+setup_dotfiles () {
   info 'installing dotfiles'
 
   local overwrite_all=false backup_all=false skip_all=false
@@ -96,4 +94,4 @@ link_dotfiles () {
   done
 }
 
-link_dotfiles
+setup_dotfiles
