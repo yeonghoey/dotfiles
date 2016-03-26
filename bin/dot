@@ -4,18 +4,18 @@
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES_ROOT=$HOME/.dotfiles
 
 # Set OS X defaults
-$DOTFILES/osx/set-defaults.sh
+$DOTFILES_ROOT/osx/set-defaults.sh
 
 # Install homebrew
-$DOTFILES/homebrew/install.sh 2>&1
+$DOTFILES_ROOT/homebrew/install.sh 2>&1
 
 # Upgrade homebrew
 echo "› brew update"
 brew update
 
 # Install software
-echo "› $DOTFILES/install"
-$DOTFILES/install
+echo "› $DOTFILES_ROOT/install"
+$DOTFILES_ROOT/install
