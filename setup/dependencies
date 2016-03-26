@@ -7,7 +7,6 @@ cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 source setup/funcs.sh
 
-
 info "installing dependencies"
 
 # Install homebrew

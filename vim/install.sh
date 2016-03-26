@@ -8,7 +8,7 @@ VUNDLE_FILE=~/.vundles
 
 if [[ ! -a $VUNDLE_PATH ]]
 then
-    git clone $VUNDLE_REPO $VUNDLE_PATH
+  git clone $VUNDLE_REPO $VUNDLE_PATH
 fi
 
 vim -u NONE -N -S $VUNDLE_FILE +PluginInstall +qall < /dev/tty
