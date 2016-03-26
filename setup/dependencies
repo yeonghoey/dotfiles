@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#
+# Run all installers.
+
+set -e
+cd "$(dirname "$0")/.."
+DOTFILES_ROOT=$(pwd -P)
+source setup/funcs.sh
+
+
+info "installing dependencies"
+
+# Install homebrew
+$DOTFILES_ROOT/homebrew/install.sh 2>&1
+
+# Upgrade homebrew
+echo "› brew update"
+brew update
+
+# Mac specific dependencies
+if [ "$(uname -s)" == "Darwin" ]
+then
+  # Set OS X defaults
+  $DOTFILES_ROOT/osx/set-defaults.sh
+
+  # Run Homebrew through the Brewfile
+  echo "› brew bundle"
+  brew bundle
+fi
+
+# find the installers and run them iteratively
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

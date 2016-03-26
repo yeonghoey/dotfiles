@@ -3,29 +3,14 @@
 # bootstrap installs things.
 
 set -e
-cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
-source setup/funcs.sh
 
-# set zsh as default
-#chsh -s /bin/zsh
+chsh -s /bin/zsh
 
 echo ''
 
-setup/gitconfig
-setup/dotfiles
-
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if source bin/dot
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
+./gitconfig
+./dotfiles
+./dependencies
 
 echo ''
-echo '  All installed!'
+echo '  All finished!'
