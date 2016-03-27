@@ -24,11 +24,3 @@ source $ZSH/oh-my-zsh.sh
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 bindkey '^ ' autosuggest-accept
-
-
-# TODO: move to other files
-eval "$(thefuck --alias)"
-eval $(docker-machine env default)
-
-alias rebaseom="git fetch origin master && git rebase -i --autosquash origin/master"
-alias rebuild='find . -name "*.class" | xargs rm; ./sbt compile'
