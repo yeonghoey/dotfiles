@@ -1,0 +1,5 @@
+#!/bin/sh
+cd $DOTFILES_ROOT/python
+source venv/bin/activate
+python aa.py
+deactivate
