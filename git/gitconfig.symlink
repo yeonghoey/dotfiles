@@ -1,7 +1,11 @@
 [include]
-        path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
 [core]
-        excludesfile = ~/.gitignore
-        editor = vim
+	excludesfile = ~/.gitignore
+	editor = vim
 [push]
-        default = simple
+	default = simple
+[rebase]
+	autoSquash = true
+[pull]
+	rebase = true
