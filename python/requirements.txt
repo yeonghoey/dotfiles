@@ -1,4 +1,6 @@
+ansicolors==1.0.2
 clipboard==0.0.4
 nltk==3.2
 pycurl==7.43.0
 pyperclip==1.5.27
+tabulate==0.7.5
