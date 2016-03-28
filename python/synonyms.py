@@ -3,6 +3,8 @@ from colors import red, green, blue
 from tabulate import tabulate
 from sys import argv, stderr
 
+import re
+
 if len(argv) != 2:
     print >> stderr, 'synonyms.py: pass a word'
     exit(1)
@@ -16,7 +18,7 @@ word = argv[1]
 synsets = wn.synsets(word)
 table = []
 for ss in synsets:
-    ssname = red(ss.name().split('.')[0])
+    ssname = re.sub(r'^[^.]+', lambda m: red(m.group(0)), ss.name())
     lemmas = ', '.join([green(l.name()) for l in ss.lemmas()])
     definition = ss.definition()
     table.append([ssname, lemmas, definition])
