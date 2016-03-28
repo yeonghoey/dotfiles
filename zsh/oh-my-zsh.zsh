@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM="$ZSH/custom"
 
 ZSH_THEME="avit"
-plugins=(git colored-man-pages zsh-autosuggestions)
+plugins=(git colorize colored-man-pages zsh-autosuggestions)
 
 
 
