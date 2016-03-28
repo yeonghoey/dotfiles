@@ -4,7 +4,7 @@ then
   sudo pip install virtualenv
 fi
 
-PYTHON_PATH=$DOTFILES_ROOT/python
+PYTHON_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [[ ! -a $PYTHON_PATH/venv ]]
 then
