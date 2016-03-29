@@ -4,6 +4,7 @@ tap 'caskroom/cask'
 tap 'homebrew/bundle'
 
 brew 'python'
+brew 'node'
 brew 'tmux'
 brew 'hub'
 
