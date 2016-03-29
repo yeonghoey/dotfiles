@@ -7,6 +7,7 @@ brew 'python'
 brew 'node'
 brew 'tmux'
 brew 'hub'
+brew 'diff-so-fancy'
 
 cask '1password'
 cask 'google-chrome'
