@@ -178,3 +178,32 @@ du -sh
 # display sizes of all entries in current directory
 du -sh *
 ```
+
+# sort
+
+### basics
+```shell
+sort -nr numbers.txt # descending numeric order
+sort -k3 output.txt  # key3, omitting the first and second fields.
+sort -f names.txt    # ignore case
+sort -s names.txt    # stable sort
+sort -u names.txt    # unique
+sort -t: /etc/passwd # use ':' as the field delimiter
+```
+
+### advanced
+```shell
+$ cat ips.txt | sort -t. -k 2,2n -k 4,4n
+127.0.0.3
+127.0.0.6
+127.0.0.12
+192.168.0.1
+192.168.0.5
+192.168.0.25
+```
+`-k2` only specifies **starting point is column2**.  
+`-k2,2` specifies both starting, and ending point. which means **exact column2**.
+
+---
+http://ss64.com/bash/sort.html
+http://www.skorks.com/2010/05/sort-files-like-a-master-with-the-linux-sort-command-bash/

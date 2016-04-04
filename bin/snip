@@ -2,5 +2,5 @@
 cd $DOTFILES_ROOT/python
 source venv/bin/activate
 cd $DOTFILES_ROOT/snippets
-grip -b $1
+grip -b "$@"
 deactivate
