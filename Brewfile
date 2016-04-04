@@ -16,5 +16,6 @@ cask '1password'
 cask 'google-chrome'
 cask 'slack'
 cask 'dockertoolbox'
-cask 'font-inconsolata'
 cask 'visualvm'
+
+cask 'font-inconsolata'
