@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM="$ZSH/custom"
 
-ZSH_THEME='minimal'
+ZSH_THEME='ys'
 plugins=(git colorize zsh-autosuggestions)
 
 
