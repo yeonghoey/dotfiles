@@ -1,4 +1,7 @@
 #!/bin/sh
+
+pip install --upgrade pip
+
 if test ! $(which virtualenv)
 then
   sudo pip install --no-cache-dir virtualenv
@@ -19,6 +22,7 @@ fi
 
 source $PYTHON_PATH/venv/bin/activate
 
+pip install --upgrade pip
 pip install --no-cache-dir -r $PYTHON_PATH/requirements.txt
 python -m nltk.downloader wordnet
 
