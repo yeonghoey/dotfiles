@@ -1,7 +1,8 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
 tap 'homebrew/bundle'
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
 
 brew 'python'
 brew 'node'
@@ -14,3 +15,4 @@ cask '1password'
 cask 'google-chrome'
 cask 'slack'
 cask 'dockertoolbox'
+cask 'font-inconsolata'
