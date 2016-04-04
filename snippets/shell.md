@@ -1,0 +1,180 @@
+# Empty a file
+```shell
+> filename
+# or
+cat /dev/null > filename
+# or
+truncate filename --size 0
+```
+
+# git branch cleanup
+### Basics
+```shell
+git checkout master
+
+git branch --merged
+git branch -d old-merged-feature
+
+git branch --no-merged
+git branch -D old-abandoned-feature
+```
+
+### Delete all merged, except master
+```shell
+git branch --merged | grep -v master | xargs git branch -d
+```
+
+### Cleanup references to remote branches
+```shell
+git branch -r
+git remote prune origin
+
+# prune when fetching
+git fetch -p
+```
+
+---
+
+http://railsware.com/blog/2014/08/11/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/
+
+
+# git status
+### Show untracked files in directories
+```shell
+git status -u
+```
+
+# Here document
+
+### Basics
+```shell
+tr a-z A-Z << END_TEXT
+one two three
+four five six
+END_TEXT
+```
+> ONE TWO THREE  
+> FOUR FIVE SIX
+
+
+### Ignore leading tabs
+```shell
+tr a-z A-Z <<- END_TEXT
+         one two three
+         four five six
+         END_TEXT
+```
+> (Same as above)
+
+
+### Disable evaluating
+```shell
+cat << 'EOF'
+\$ Working dir "$PWD" `pwd`
+EOF
+```
+> \$ Working dir "$PWD" \`pwd\`
+
+---
+
+https://en.wikipedia.org/wiki/Here_document
+
+# watch
+```shell
+# `ls` every 2 seconds(default)
+watch ls
+
+# `from` every 60 seconds
+watch -n 60 from
+
+# highlight differences
+watch -d ls -l
+```
+
+# tar
+```shell
+tar -cvf target.tar /target/path/
+```
+```
+/target/path/a.txt
+/target/path/b.png
+/target/path/.cache
+```
+
+---
+
+```shell
+tar -C /target/path/ -cvf target.tar .
+```
+```
+./a.txt
+./b.png
+./.cache
+```
+
+---
+
+```shell
+tar -cvf target.tar --exclude=.cache --exclude a.txt /target/path/
+tar -cvzf target.tar.gz /target/path/
+```
+
+---
+
+```shell
+# works with every compression algorithms
+tar -xvf target.tar 
+```
+
+```shell
+tar -C /workspace -xvf target.tar
+```
+```
+/workspace/target/path/a.txt
+/workspace/target/path/b.png
+/workspace/target/path/.cache
+```
+
+---
+
+```shell
+tar -tvf target.tar
+```
+```
+drwxr-xr-x  0 hoey   staff       0 Mar 12 04:22 ./
+-rw-r--r--  0 hoey   staff       0 Mar 12 04:22 ./readme
+```
+---
+
+> tar puts multiple files into a single (tar) file.
+> gzip, bzip2, compress compresses one file (only).
+
+---
+http://www.tecmint.com/18-tar-command-examples-in-linux/
+http://askubuntu.com/questions/122141/whats-the-difference-between-tar-gz-and-gz-or-tar-7z-and-7z
+
+
+# du
+### default
+displays disk usage for each sub directory
+**-h** is "**H**uman readable"
+```shell
+du -h Downloads/
+```
+
+### for **a**ll files
+```shell
+du -ah
+
+# list file in order of size
+du -a Downloads/ | sort -n
+```
+
+###  specified file
+aka "merge subdirectories"
+```shell
+du -sh
+
+# display sizes of all entries in current directory
+du -sh *
+```
