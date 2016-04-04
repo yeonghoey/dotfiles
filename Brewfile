@@ -11,6 +11,7 @@ brew 'hub'
 brew 'diff-so-fancy'
 brew 'imagemagick'
 
+cask 'iterm2'
 cask '1password'
 cask 'google-chrome'
 cask 'slack'
