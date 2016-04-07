@@ -1,5 +1,6 @@
-" for contrasting gvim and terminal vim 
-set background=light
+colorscheme solarized
+set background=dark
+
 set clipboard=unnamed
 set lines=50 columns =200
 set guifont=Menlo:h20
