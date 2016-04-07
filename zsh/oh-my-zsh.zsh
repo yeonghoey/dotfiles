@@ -4,8 +4,6 @@ ZSH_CUSTOM="$ZSH/custom"
 ZSH_THEME='afowler'
 plugins=(git colorize zsh-autosuggestions)
 
-
-
 # ----------------------------------------------------------------------------
 OHMYZSH_REPO=git://github.com/robbyrussell/oh-my-zsh.git
 if [[ ! -a $ZSH ]]
@@ -22,5 +20,4 @@ fi
 source $ZSH/oh-my-zsh.sh
 # ----------------------------------------------------------------------------
 
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 bindkey '^ ' autosuggest-accept
