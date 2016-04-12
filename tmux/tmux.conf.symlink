@@ -42,8 +42,6 @@ set -g status-utf8 on
 set -g status-interval 60
 set -g status-justify centre
 
-set -g mouse
-
 # use vi key-bindings
 setw -g mode-keys vi
 bind -t vi-copy Enter copy-pipe "cat | pbcopy"
