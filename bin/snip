@@ -1,7 +1,0 @@
-#!/bin/sh
-cd $DOTFILES_ROOT/python
-source venv/bin/activate
-cd $DOTFILES_ROOT/snippets
-ls | grep -v README.md | awk '{ printf ("[%s](./%s)\n", $1, $1) }' > README.md
-grip -b "$@"
-deactivate
