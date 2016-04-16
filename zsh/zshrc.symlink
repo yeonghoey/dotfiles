@@ -1,10 +1,5 @@
 export DOTFILES_ROOT=$HOME/.dotfiles
 
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
-fi
-
 # autoload contents of functions
 autoload -U $DOTFILES_ROOT/functions/*(:t)
 
@@ -35,3 +30,13 @@ do
 done
 
 unset config_files
+
+# load local configuration
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# load oh-my-zsh.
+# This should be at last because of order sensitive plugins
+source $DOTFILES_ROOT/zsh/oh-my-zsh.sh
