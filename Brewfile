@@ -12,6 +12,7 @@ brew 'diff-so-fancy'
 brew 'imagemagick'
 
 cask 'iterm2'
+cask 'flycut'
 cask '1password'
 cask 'google-chrome'
 cask 'slack'
