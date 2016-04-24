@@ -11,6 +11,7 @@ brew 'hub'
 brew 'diff-so-fancy'
 brew 'imagemagick'
 
+cask 'java'
 cask 'iterm2'
 cask 'flycut'
 cask '1password'
