@@ -20,4 +20,13 @@ cask 'slack'
 cask 'dockertoolbox'
 cask 'visualvm'
 
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'qlprettypatch'
+cask 'quicklook-csv'
+cask 'betterzipql'
+cask 'qlimagesize'
+
 cask 'font-inconsolata'
