@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM="$ZSH/custom"
 
 ZSH_THEME='afowler'
-plugins=(git colorize zsh-autosuggestions \
+plugins=(git colorize zsh-autosuggestions osx \
     zsh-syntax-highlighting) # syntax-highlighting should be at last
 
 # ----------------------------------------------------------------------------
