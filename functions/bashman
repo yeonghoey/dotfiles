@@ -1,0 +1,2 @@
+# http://unix.stackexchange.com/questions/18087/can-i-get-individual-man-pages-for-the-bash-builtin-commands
+man bash | less -p "^       $1 ";
