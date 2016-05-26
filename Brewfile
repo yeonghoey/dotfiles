@@ -15,6 +15,7 @@ brew 'imagemagick'
 
 cask 'java'
 cask 'iterm2'
+cask 'atom'
 cask 'flycut'
 cask '1password'
 cask 'google-chrome'
