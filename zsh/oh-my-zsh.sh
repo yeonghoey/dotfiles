@@ -12,14 +12,14 @@ then
     git clone $OHMYZSH_REPO $ZSH
 fi
 
-AUTOSUGGESTIONS_REPO=git://github.com/zsh-users/zsh-autosuggestions
+AUTOSUGGESTIONS_REPO=https://github.com/zsh-users/zsh-autosuggestions.git
 AUTOSUGGESTIONS_PATH=$ZSH_CUSTOM/plugins/zsh-autosuggestions
 if [[ ! -a $AUTOSUGGESTIONS_PATH ]]
 then
     git clone $AUTOSUGGESTIONS_REPO $AUTOSUGGESTIONS_PATH
 fi
 
-SYNTAXHIGHLIGHTING_REPO=git@github.com:zsh-users/zsh-syntax-highlighting.git
+SYNTAXHIGHLIGHTING_REPO=https://github.com/zsh-users/zsh-syntax-highlighting.git
 SYNTAXHIGHLIGHTING_PATH=$ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 if [[ ! -a $SYNTAXHIGHLIGHTING_PATH ]]
 then
