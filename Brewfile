@@ -1,13 +1,11 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'neovim/neovim'
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 
 brew 'python'
 brew 'node'
-brew 'neovim/neovim/neovim'
 brew 'tmux'
 brew 'hub'
 brew 'diff-so-fancy'
