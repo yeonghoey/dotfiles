@@ -26,8 +26,8 @@ nnoremap <Space> za
 vnoremap <Space> za
 nnoremap <leader>z zMzvzz
 
-"Fugitive
 if has("autocmd")
+  "Fugitive
   autocmd BufReadPost fugitive://* set bufhidden=delete
 
   " Override tab style by file types
@@ -37,6 +37,7 @@ if has("autocmd")
   autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
   autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
 endif
+
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 "iTerm2 and tmux, insert mode cursor settings
