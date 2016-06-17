@@ -22,11 +22,7 @@ Plugin 'derekwyatt/vim-scala.git'
 Plugin 'sjl/gundo.vim.git'
 Plugin 'solarnz/thrift.vim'
 Plugin 'ekalinin/Dockerfile.vim'
-
-Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 
 " Colorschemes
 Plugin 'altercation/vim-colors-solarized'
