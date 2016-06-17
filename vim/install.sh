@@ -13,3 +13,11 @@ fi
 
 # Install Plugins
 vim -u NONE -N -S $VUNDLE_FILE +PluginInstall +qall < /dev/tty
+
+# YouCompleteMe Plugin requires addtional step.
+YOUCOMPLETEME_PATH=~/.vim/bundle/YouCompleteMe
+if [[ -d "$YOUCOMPLETEME_PATH" ]]; then
+  pushd $YOUCOMPLETEME_PATH
+  ./install.py
+  popd
+fi
