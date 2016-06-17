@@ -5,6 +5,7 @@ tap 'caskroom/cask'
 tap 'caskroom/fonts'
 
 brew 'python'
+brew 'cmake'
 brew 'node'
 brew 'tmux'
 brew 'hub'
