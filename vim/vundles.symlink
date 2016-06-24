@@ -27,6 +27,7 @@ Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'klen/python-mode'
 
 " Colorschemes
 Plugin 'altercation/vim-colors-solarized'
