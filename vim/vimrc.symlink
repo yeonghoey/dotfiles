@@ -71,4 +71,4 @@ let g:pymode_rope = 0
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-nnoremap <leader>a :Ack<Space>
+nnoremap <leader>a :Ack!<Space>
