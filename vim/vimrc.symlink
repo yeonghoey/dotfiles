@@ -67,5 +67,4 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Pymode configurations
-let g:pymode_folding = 0
 let g:pymode_rope = 0
