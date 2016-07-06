@@ -11,6 +11,7 @@ brew 'tmux'
 brew 'hub'
 brew 'diff-so-fancy'
 brew 'imagemagick'
+brew 'the_silver_searcher'
 
 cask 'java'
 cask 'iterm2'

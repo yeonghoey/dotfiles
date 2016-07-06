@@ -66,3 +66,8 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Pymode configurations
 let g:pymode_rope = 0
+
+" ack.vim + the_silver_searcher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
