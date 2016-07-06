@@ -72,6 +72,8 @@ let g:pymode_rope = 0
 " ack.vim + the_silver_searcher
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
+  nnoremap <leader>aa :Ack!<Space>
+  nnoremap <leader>aw :Ack! --literal '<C-R><C-W>'<CR>
+  vnoremap <leader>av y:Ack! --literal '<C-R>"'<CR>
 endif
-nnoremap <leader>aa :Ack!<Space>
-nnoremap <leader>aw :Ack!<Space><C-R><C-W><CR>
+
