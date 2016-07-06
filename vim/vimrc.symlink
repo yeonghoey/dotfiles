@@ -52,8 +52,9 @@ if exists('$ITERM_PROFILE')
 end
 
 
-" YCM key maps
+" YouCompleteMe
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_goto_buffer_command = 'vertical-split'
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
