@@ -21,8 +21,8 @@ set pastetoggle=<F11>
 let &colorcolumn=join(range(80, 80), ",")
 
 "Folding
-nnoremap <Space> zA
-vnoremap <Space> zA
+nnoremap <Space> za
+vnoremap <Space> za
 nnoremap <leader>z zMzvzz
 
 if has("autocmd")
