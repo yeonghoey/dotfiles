@@ -17,17 +17,20 @@ set nowrap
 " Paste Toggle
 set pastetoggle=<F11>
 
-"Highlight 80th character
+" Highlight 80th character
 let &colorcolumn=join(range(80, 80), ",")
 
-"Folding
+" Folding
 nnoremap <Space> za
 vnoremap <Space> za
 nnoremap <leader>z zMzvzz
 
 if has("autocmd")
-  "Fugitive
+  " Fugitive
   autocmd BufReadPost fugitive://* set bufhidden=delete
+
+  " Change local working directory automatically
+  autocmd BufEnter * silent! lcd %:p:h
 
   " Override tab style by file types
   autocmd Filetype sh setlocal ts=2 sts=2 sw=2 expandtab
@@ -40,7 +43,7 @@ endif
 
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-"iTerm2 and tmux, insert mode cursor settings
+" iTerm2 and tmux, insert mode cursor settings
 if exists('$ITERM_PROFILE')
   if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
