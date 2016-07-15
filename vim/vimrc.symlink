@@ -54,6 +54,8 @@ if exists('$ITERM_PROFILE')
   endif
 end
 
+" netrw: Changes working directory as browsing
+let g:netrw_keepdir=0
 
 " YouCompleteMe
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
