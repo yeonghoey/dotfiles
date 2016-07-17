@@ -1,31 +1,28 @@
-# prefix: C-a
+# Use zsh by default
 set-option -g default-shell /bin/zsh
-set -g default-terminal "screen-256color"
-set -g detach-on-destroy off
 
+# PRE is C-a
 set -g prefix C-a
 bind C-a send-prefix
 unbind C-b
 
-# base-index: 1
-set  -g base-index 1
+# Use vi key-bindings
+setw -g mode-keys vi
+bind -t vi-copy Enter copy-pipe "cat | pbcopy"
+
+# Convenience settings
+set -g base-index 1
 setw -g pane-base-index 1
+set -g detach-on-destroy off
 
-# session traversal
-bind -r ( switch-client -p
-bind -r ) switch-client -n
-
-# status customizing
+# More readable status bar
 set -g status-left-length 40
 set -g status-left "#[fg=green]session: #S #[fg=yellow]#I #[fg=cyan]#P"
 set -g status-justify centre
 
-# use vi key-bindings
-setw -g mode-keys vi
-bind -t vi-copy Enter copy-pipe "cat | pbcopy"
-
-# shortcut for sync-panes toggle
-bind C-s set synchronize-panes
+# session traversal
+bind -r ( switch-client -p
+bind -r ) switch-client -n
 
 # TPM
 set -g @plugin 'tmux-plugins/tpm'
@@ -33,6 +30,7 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'jbnicolai/tmux-fpp'
 set -g @plugin 'seebi/tmux-colors-solarized'
 
