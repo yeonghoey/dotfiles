@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 source setup/funcs.sh
 
-chsh --shell $(which zsh)
+chsh -s $(which zsh)
 
 echo ''
 
