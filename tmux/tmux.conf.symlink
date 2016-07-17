@@ -15,20 +15,6 @@ setw -g pane-base-index 1
 bind -r ( switch-client -p
 bind -r ) switch-client -n
 
-# window/pane bindings
-bind | split-window -h -c "#{pane_current_path}"
-bind _ split-window -v -c "#{pane_current_path}"
-bind -r C-h select-window -t :-
-bind -r C-l select-window -t :+
-bind h select-pane -L
-bind j select-pane -D
-bind k select-pane -U
-bind l select-pane -R
-bind -r H resize-pane -L 5
-bind -r J resize-pane -D 5
-bind -r K resize-pane -U 5
-bind -r L resize-pane -R 5
-
 # status customizing
 set -g status-left-length 40
 set -g status-left "#[fg=green]session: #S #[fg=yellow]#I #[fg=cyan]#P"
@@ -47,5 +33,6 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'seebi/tmux-colors-solarized'
 set -g @plugin 'jbnicolai/tmux-fpp'
 set -g @plugin 'tmux-plugins/tmux-copycat'
+set -g @plugin 'tmux-plugins/tmux-pain-control'
 
 run '~/.tmux/plugins/tpm/tpm'
