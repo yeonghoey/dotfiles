@@ -1,10 +1,13 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
 
 pip install --upgrade pip
 
 if test ! $(which virtualenv)
 then
   sudo pip install --no-cache-dir virtualenv
+  sudo pip install --no-cache-dir virtualenvwrapper
 fi
 
 if test ! $(which pygmentize)
