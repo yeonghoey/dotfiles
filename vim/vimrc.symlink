@@ -25,12 +25,12 @@ nnoremap <Space> za
 vnoremap <Space> za
 nnoremap <leader>z zMzvzz
 
+" Change local directory
+nnoremap <leader>cd :lcd %:p:h<CR>:pwd<CR>
+
 if has("autocmd")
   " Fugitive
   autocmd BufReadPost fugitive://* set bufhidden=delete
-
-  " Change local working directory automatically
-  autocmd BufEnter * silent! lcd %:p:h
 
   " Override tab style by file types
   autocmd Filetype sh setlocal ts=2 sts=2 sw=2 expandtab
