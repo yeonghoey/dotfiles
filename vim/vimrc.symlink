@@ -22,7 +22,8 @@ set ttymouse=xterm2
 set pastetoggle=<F11>
 
 " Highlight 80th character
-let &colorcolumn=join(range(80, 80), ",")
+highlight OverLength ctermbg=darkgray ctermfg=white guibg=#592929
+match OverLength /\v%80v.+/
 
 " Folding
 nnoremap <Space> za
@@ -82,4 +83,3 @@ if executable('ag')
   nnoremap <leader>aw :Ack! --literal '<C-R><C-W>'<CR>
   vnoremap <leader>av y:Ack! --literal '<C-R>"'<CR>
 endif
-
