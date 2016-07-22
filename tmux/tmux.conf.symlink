@@ -1,6 +1,5 @@
 # Use zsh by default
 set-option -g default-shell /bin/zsh
-set-option -g mouse on
 
 # PRE is C-a
 set -g prefix C-a
