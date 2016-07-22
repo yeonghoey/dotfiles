@@ -22,7 +22,7 @@ set ttymouse=xterm2
 set pastetoggle=<F11>
 
 " Highlight 80th character
-highlight OverLength ctermbg=darkgray ctermfg=white guibg=#592929
+highlight OverLength ctermbg=darkgray ctermfg=red guibg=#592929
 match OverLength /\v%80v.+/
 
 " Folding
@@ -75,6 +75,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Pymode configurations
 let g:pymode_rope = 0
+let g:pymode_options_colorcolumn = 0
 
 " ack.vim + the_silver_searcher
 if executable('ag')
