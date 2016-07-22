@@ -1,10 +1,12 @@
 source ~/.vundles
+
+
+" General settings
 set background=dark
 
 filetype plugin indent on
 syntax on
 
-" General settings
 set number
 set ts=4 sts=4 sw=4 expandtab
 
@@ -14,9 +16,15 @@ set history=9999
 set hlsearch
 set nowrap
 
+
 " Mouse
 set mouse=a
-set ttymouse=xterm2
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+
 
 " Paste Toggle
 set pastetoggle=<F11>
@@ -25,13 +33,16 @@ set pastetoggle=<F11>
 highlight OverLength ctermbg=darkgray ctermfg=red guibg=#592929
 match OverLength /\v%80v.+/
 
+
 " Folding
 nnoremap <Space> za
 vnoremap <Space> za
 nnoremap <leader>z zMzvzz
 
+
 " Change local directory
 nnoremap <leader>cd :lcd %:p:h<CR>:pwd<CR>
+
 
 if has("autocmd")
   " Fugitive
@@ -48,6 +59,7 @@ endif
 
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+
 " iTerm2 and tmux, insert mode cursor settings
 if exists('$ITERM_PROFILE')
   if exists('$TMUX')
@@ -59,23 +71,28 @@ if exists('$ITERM_PROFILE')
   endif
 end
 
+
 " YouCompleteMe
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_goto_buffer_command = 'vertical-split'
+
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
+
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+
 " Pymode configurations
 let g:pymode_rope = 0
 let g:pymode_options_colorcolumn = 0
+
 
 " ack.vim + the_silver_searcher
 if executable('ag')
