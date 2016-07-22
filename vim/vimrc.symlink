@@ -14,6 +14,10 @@ set history=9999
 set hlsearch
 set nowrap
 
+" Mouse
+set mouse=a
+set ttymouse=xterm2
+
 " Paste Toggle
 set pastetoggle=<F11>
 
