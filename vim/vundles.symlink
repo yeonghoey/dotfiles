@@ -29,6 +29,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'klen/python-mode'
 Plugin 'mileszs/ack.vim'
+Plugin 'rhysd/committia.vim'
 
 " Colorschemes
 Plugin 'altercation/vim-colors-solarized'
