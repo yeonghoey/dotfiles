@@ -6,10 +6,6 @@ set -g prefix C-a
 bind C-a send-prefix
 unbind C-b
 
-# Use vi key-bindings
-setw -g mode-keys vi
-bind -t vi-copy Enter copy-pipe "cat | pbcopy"
-
 # Convenience settings
 set -g base-index 1
 setw -g pane-base-index 1
@@ -20,9 +16,14 @@ set -g status-left-length 40
 set -g status-left "#[fg=green]session: #S #[fg=yellow]#I #[fg=cyan]#P"
 set -g status-justify centre
 
-# session traversal
-bind -r ( switch-client -p
-bind -r ) switch-client -n
+# Use vi mode-keys
+setw -g mode-keys vi
+bind -t vi-copy Enter copy-pipe "cat | pbcopy"
+
+# Custom key bindings
+bind C-s set-window-option synchronize-panes
+bind -r ( switch-client -p # session traversal
+bind -r ) switch-client -n # "
 
 # Tmux Plugin Manager
 # https://github.com/tmux-plugins/tpm#key-bindings
