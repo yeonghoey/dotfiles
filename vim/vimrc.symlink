@@ -91,3 +91,13 @@ if executable('ag')
   nnoremap <leader>aw :Ack! --literal '<C-R><C-W>'<CR>
   vnoremap <leader>av y:Ack! --literal '<C-R>"'<CR>
 endif
+
+
+"vim-jekyll configuration
+let g:jekyll_post_extension = '.md'
+let g:jekyll_post_template =  [
+  \ '---',
+  \ 'title: "JEKYLL_TITLE"',
+  \ 'updated: "JEKYLL_DATE"',
+  \ '---',
+  \ '']
