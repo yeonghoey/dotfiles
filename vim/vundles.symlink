@@ -30,6 +30,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'klen/python-mode'
 Plugin 'mileszs/ack.vim'
 Plugin 'rhysd/committia.vim'
+Plugin 'parkr/vim-jekyll'
 
 " Colorschemes
 Plugin 'altercation/vim-colors-solarized'
