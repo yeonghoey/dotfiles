@@ -31,6 +31,7 @@ Plugin 'klen/python-mode'
 Plugin 'mileszs/ack.vim'
 Plugin 'rhysd/committia.vim'
 Plugin 'parkr/vim-jekyll'
+Plugin 'plasticboy/vim-markdown'
 
 " Colorschemes
 Plugin 'altercation/vim-colors-solarized'
