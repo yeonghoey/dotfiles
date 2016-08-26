@@ -15,6 +15,11 @@ then
   sudo pip install --no-cache-dir pygments
 fi
 
+if test ! $(which when-changed)
+then
+  sudo pip install --no-cache-dir when-changed
+fi
+
 
 PYTHON_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
