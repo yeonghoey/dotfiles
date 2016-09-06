@@ -1,0 +1,5 @@
+#!/bin/sh
+
+topp() {
+  top -p $(pgrep -d',' "$1")
+}
