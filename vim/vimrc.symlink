@@ -90,7 +90,7 @@ let g:syntastic_python_checkers = ['flake8']
 " ack.vim + the_silver_searcher
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
-  nnoremap <leader>aa :Ack!<Space>
+  nnoremap <leader>aa :Ack! --literal<Space>
   nnoremap <leader>aw :Ack! --literal '<C-R><C-W>'<CR>
   vnoremap <leader>av y:Ack! --literal '<C-R>"'<CR>
 endif
