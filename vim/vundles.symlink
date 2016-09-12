@@ -30,7 +30,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'klen/python-mode'
 Plugin 'scrooloose/syntastic'
 Plugin 'mileszs/ack.vim'
-Plugin 'rhysd/committia.vim'
 Plugin 'parkr/vim-jekyll'
 Plugin 'plasticboy/vim-markdown'
 
