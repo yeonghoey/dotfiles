@@ -1,0 +1,1 @@
+alias emacs='TERM=screen-16color emacs -nw'
