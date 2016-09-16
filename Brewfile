@@ -13,6 +13,7 @@ brew 'diff-so-fancy'
 brew 'imagemagick'
 brew 'the_silver_searcher'
 brew 'fpp'
+brew 'ispell'
 
 cask 'java'
 cask 'iterm2'
