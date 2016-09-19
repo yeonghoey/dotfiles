@@ -83,11 +83,6 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 
-" python-mode
-let g:pymode_lint = 0
-let g:pymode_rope = 0
-
-
 " Syntastic configurations
 let g:syntastic_python_checkers = ['flake8']
 
