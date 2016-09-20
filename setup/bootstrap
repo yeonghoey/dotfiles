@@ -12,6 +12,7 @@ chsh -s $(which zsh)
 echo ''
 
 # Fix OSX bug
+# See: https://github.com/sorin-ionescu/prezto/issues/381
 if [ "$(uname -s)" = "Darwin" -a -e '/etc/zshenv' ]; then
   sudo mv /etc/zshenv /etc/zprofile
 fi
