@@ -8,10 +8,13 @@
    '(
      auto-completion
      better-defaults
+     dockerfile
      emacs-lisp
      git
      markdown
      org
+     (python :variables python-test-runner 'pytest)
+     scala
      (shell :variables
             shell-default-shell 'eshell
             shell-enable-smart-eshell t
@@ -19,9 +22,6 @@
             shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     dockerfile
-     (python :variables python-test-runner 'pytest)
-     scala
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(exec-path-from-shell)
