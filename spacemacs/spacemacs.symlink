@@ -85,7 +85,7 @@
 
 (defun dotspacemacs/user-config ()
   (spacemacs/toggle-highlight-current-line-globally-off)
-  (ensime-startup-snapshot-notification nil)
+  (setq ensime-startup-snapshot-notification nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
