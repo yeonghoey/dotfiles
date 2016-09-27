@@ -32,6 +32,8 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'yeonghoey/tmux-fpp'
-set -g @plugin 'seebi/tmux-colors-solarized'
+
+set -g @plugin 'jimeh/tmux-themepack'
+set -g @themepack 'block/yellow'
 
 run '~/.tmux/plugins/tpm/tpm'
