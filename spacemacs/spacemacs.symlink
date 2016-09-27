@@ -39,7 +39,7 @@
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(zenburn)
    dotspacemacs-colorize-cursor-according-to-state nil
-   dotspacemacs-default-font '("Inconsolata"
+   dotspacemacs-default-font '("DejaVu Sans Mono for Powerline"
                                :size 18
                                :weight normal
                                :width normal
