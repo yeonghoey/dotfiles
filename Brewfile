@@ -1,8 +1,4 @@
-cask_args appdir: '/Applications'
-
 tap 'homebrew/bundle'
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
 
 brew 'python'
 brew 'cmake'
@@ -14,24 +10,3 @@ brew 'imagemagick'
 brew 'the_silver_searcher'
 brew 'fpp'
 brew 'ispell'
-
-cask 'java'
-cask 'iterm2'
-cask 'atom'
-cask 'flycut'
-cask '1password'
-cask 'google-chrome'
-cask 'slack'
-cask 'dockertoolbox'
-cask 'visualvm'
-
-cask 'qlcolorcode'
-cask 'qlstephen'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'qlprettypatch'
-cask 'quicklook-csv'
-cask 'betterzipql'
-cask 'qlimagesize'
-
-cask 'font-inconsolata'
