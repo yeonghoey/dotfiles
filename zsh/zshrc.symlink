@@ -1,5 +1,8 @@
 export DOTFILES_ROOT=$HOME/.dotfiles
 
+# AUTO_TITLE is annoying.  Disable for just showing program names.
+DISABLE_AUTO_TITLE=true
+
 # autoload contents of functions
 autoload -U $DOTFILES_ROOT/functions/*(:t)
 
