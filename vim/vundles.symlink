@@ -7,33 +7,16 @@ Plugin 'VundleVim/Vundle.vim'
 "------------------------------------------------------------------------------
 
 " General enhancements
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vitalk/vim-simple-todo'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
-Plugin 'derekwyatt/vim-scala.git'
-Plugin 'sjl/gundo.vim.git'
-Plugin 'solarnz/thrift.vim'
-Plugin 'ekalinin/Dockerfile.vim'
-
-Plugin 'ervandew/supertab'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/syntastic'
 Plugin 'mileszs/ack.vim'
-Plugin 'parkr/vim-jekyll'
-Plugin 'plasticboy/vim-markdown'
-
-" Colorschemes
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 
 "-------------------------------------------------------------------------------
 "Vundle Cleanup
