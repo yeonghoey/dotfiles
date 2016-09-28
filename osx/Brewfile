@@ -23,6 +23,3 @@ cask 'qlprettypatch'
 cask 'quicklook-csv'
 cask 'betterzipql'
 cask 'qlimagesize'
-
-cask 'font-inconsolata'
-cask 'font-dejavu-sans-mono-for-powerline'
