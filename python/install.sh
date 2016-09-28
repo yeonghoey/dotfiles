@@ -6,18 +6,18 @@ pip install --upgrade pip
 
 if test ! $(which virtualenv)
 then
-  sudo pip install --no-cache-dir virtualenv
-  sudo pip install --no-cache-dir virtualenvwrapper
+  pip install --no-cache-dir virtualenv
+  pip install --no-cache-dir virtualenvwrapper
 fi
 
 if test ! $(which pygmentize)
 then
-  sudo pip install --no-cache-dir pygments
+  pip install --no-cache-dir pygments
 fi
 
 if test ! $(which when-changed)
 then
-  sudo pip install --no-cache-dir when-changed
+  pip install --no-cache-dir when-changed
 fi
 
 
