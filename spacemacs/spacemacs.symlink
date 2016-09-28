@@ -40,7 +40,7 @@
    dotspacemacs-themes '(zenburn)
    dotspacemacs-colorize-cursor-according-to-state nil
    dotspacemacs-default-font '("DejaVu Sans Mono for Powerline"
-                               :size 18
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
