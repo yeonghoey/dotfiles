@@ -3,6 +3,8 @@ cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 
+brew 'ispell'
+
 cask 'java'
 cask 'iterm2'
 cask 'atom'
