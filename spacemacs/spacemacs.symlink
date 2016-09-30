@@ -21,6 +21,7 @@
             shell-default-position 'bottom)
      spell-checking
      syntax-checking
+     yaml
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '(exec-path-from-shell)
