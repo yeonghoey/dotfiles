@@ -53,7 +53,7 @@ def play_downloaded(filename):
 
 
 queries = [
-    r'http://www.google.com/search?tbm=isch&q={}',
+    r'http://www.google.com/search?tbm=isch&q={}+meaning',
     r'http://endic.naver.com/search.nhn?sLn=en&query={}']
 
 if __name__ == '__main__':
