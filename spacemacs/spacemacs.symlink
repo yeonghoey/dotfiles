@@ -85,7 +85,6 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (spacemacs/toggle-highlight-current-line-globally-off)
   (setq ensime-startup-snapshot-notification nil)
   (setq ensime-goto-test-config-defaults
         '(:test-class-names-fn ensime-goto-test--test-class-names
