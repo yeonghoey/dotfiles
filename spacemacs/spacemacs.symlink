@@ -16,7 +16,6 @@
      scala
      (shell :variables
             shell-default-shell 'eshell
-            shell-enable-smart-eshell t
             shell-default-height 30
             shell-default-position 'bottom)
      spell-checking
@@ -38,7 +37,8 @@
    dotspacemacs-startup-lists '(recents projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(zenburn)
+   dotspacemacs-themes '(zenburn
+                         sanityinc-solarized-dark)
    dotspacemacs-colorize-cursor-according-to-state nil
    dotspacemacs-default-font '("DejaVu Sans Mono for Powerline"
                                :size 16
