@@ -35,7 +35,7 @@
    dotspacemacs-check-for-update t
    dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading nil
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner nil
    dotspacemacs-startup-lists '(recents projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
@@ -87,9 +87,10 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (setq sh-indentation 2)
-  (setq ensime-startup-snapshot-notification nil)
-  )
+  (setq-default
+   sh-indentation 2
+   ensime-startup-snapshot-notification nil
+   ))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
