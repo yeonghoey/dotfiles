@@ -85,6 +85,7 @@
   )
 
 (defun dotspacemacs/user-config ()
+  (setq sh-indentation 2)
   (setq ensime-startup-snapshot-notification nil)
   (setq ensime-goto-test-config-defaults
         '(:test-class-names-fn ensime-goto-test--test-class-names
