@@ -87,10 +87,9 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (setq-default
-   sh-indentation 2
-   ensime-startup-snapshot-notification nil
-   ))
+  (setq-default sh-indentation 2)
+  (setq-default ensime-startup-snapshot-notification nil)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
