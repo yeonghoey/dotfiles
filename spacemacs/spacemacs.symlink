@@ -7,9 +7,10 @@
    dotspacemacs-configuration-layers
    '(auto-completion
      better-defaults
-     dockerfile
+     docker
      emacs-lisp
      git
+     javascript
      markdown
      org
      (python :variables python-test-runner 'pytest)
