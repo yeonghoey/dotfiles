@@ -9,6 +9,7 @@
      better-defaults
      docker
      emacs-lisp
+     fasd
      git
      javascript
      markdown
