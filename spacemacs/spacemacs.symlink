@@ -41,8 +41,10 @@
    dotspacemacs-startup-lists '(recents projects)
    dotspacemacs-startup-recent-list-size 5
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(zenburn
-                         sanityinc-solarized-dark)
+   dotspacemacs-themes '(monokai
+                         zenburn
+                         sanityinc-solarized-dark
+                         sanityinc-solarized-light)
    dotspacemacs-colorize-cursor-according-to-state nil
    dotspacemacs-default-font '("DejaVu Sans Mono for Powerline"
                                :size 16
