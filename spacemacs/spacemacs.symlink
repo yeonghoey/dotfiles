@@ -12,7 +12,7 @@
      fasd
      git
      javascript
-     markdown
+     (markdown :variables markdown-live-preview-engine 'vmd)
      org
      (python :variables python-test-runner 'pytest)
      (ranger :variables ranger-show-preview t)
