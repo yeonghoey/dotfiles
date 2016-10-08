@@ -84,7 +84,7 @@
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
-   dotspacemacs-whitespace-cleanup 'trailing
+   dotspacemacs-whitespace-cleanup nil
    ))
 
 (defun dotspacemacs/user-init ()
@@ -94,5 +94,4 @@
   (setq-default sh-indentation 2)
   (setq-default ensime-startup-snapshot-notification nil)
 
-  (add-hook 'markdown-mode-hook 'spacemacs/toggle-whitespace-cleanup-off)
   )
