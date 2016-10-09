@@ -11,6 +11,7 @@
      emacs-lisp
      fasd
      git
+     ivy
      javascript
      (markdown :variables markdown-live-preview-engine 'vmd)
      org
