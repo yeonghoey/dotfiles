@@ -89,6 +89,7 @@
   )
 
 (defun dotspacemacs/user-config ()
+  (setq-default magit-diff-refine-hunk 'all)
   (setq-default sh-indentation 2)
   (setq-default ensime-startup-snapshot-notification nil)
   )
