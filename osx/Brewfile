@@ -4,6 +4,7 @@ tap 'caskroom/cask'
 tap 'caskroom/fonts'
 
 brew 'ispell'
+brew 'node'
 
 cask 'java'
 cask 'iterm2'

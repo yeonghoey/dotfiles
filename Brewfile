@@ -2,7 +2,6 @@ tap 'homebrew/bundle'
 
 brew 'python'
 brew 'cmake'
-brew 'node'
 brew 'tmux'
 brew 'hub'
 brew 'diff-so-fancy'
