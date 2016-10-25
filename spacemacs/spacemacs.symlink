@@ -20,7 +20,6 @@
      org
      (python :variables python-test-runner 'pytest)
      (ranger :variables ranger-show-preview t)
-     selectric
      scala
      (shell :variables
             shell-default-shell 'eshell
