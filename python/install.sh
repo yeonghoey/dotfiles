@@ -20,6 +20,11 @@ then
   pip install --no-cache-dir when-changed
 fi
 
+if test ! $(which srt)
+then
+  pip install --no-cache-dir pysrt
+fi
+
 
 PYTHON_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
