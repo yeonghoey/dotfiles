@@ -9,6 +9,7 @@
    dotspacemacs-configuration-layers
    '(auto-completion
      better-defaults
+     csv
      docker
      emacs-lisp
      fasd
