@@ -115,10 +115,19 @@
   )
 
 (defun dotspacemacs/user-config ()
-  (setq-default magit-diff-refine-hunk 'all)
-  (setq-default ensime-startup-snapshot-notification nil)
-
+  ;; Indentations
   (setq-default sh-indentation 2)
   (setq-default js-indent-level 2)
   (setq-default js2-basic-offset 2)
+
+  ;; Disable ungainly line wrapping related indicators
+  (setq-default fringe-indicator-alist
+                (assq-delete-all 'continuation
+                (assq-delete-all 'truncation
+                  fringe-indicator-alist)))
+
+  ;; Others
+  (setq-default magit-diff-refine-hunk 'all)
+  (setq-default ensime-startup-snapshot-notification nil)
   )
+
