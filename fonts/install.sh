@@ -2,7 +2,7 @@
 
 set -e
 
-fonts_repo=https://github.com/powerline/fonts.git
+fonts_repo=https://github.com/yeonghoey/fonts.git
 fonts_path="$HOME/.fonts"
 
 if [[ ! -a "$fonts_path" ]]; then

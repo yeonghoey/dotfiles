@@ -61,7 +61,7 @@
                          sanityinc-solarized-light
                          )
    dotspacemacs-colorize-cursor-according-to-state nil
-   dotspacemacs-default-font '("DejaVu Sans Mono for Powerline"
+   dotspacemacs-default-font '("NanumGothicCoding"
                                :size 14
                                :weight normal
                                :width normal
