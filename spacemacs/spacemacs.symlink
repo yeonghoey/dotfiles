@@ -130,5 +130,6 @@
   ;; Others
   (setq-default magit-diff-refine-hunk 'all)
   (setq-default ensime-startup-snapshot-notification nil)
+  (setq-default default-input-method "korean-hangul")
   )
 
