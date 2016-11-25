@@ -52,7 +52,7 @@
    dotspacemacs-startup-lists '()
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(deeper-blue
+   dotspacemacs-themes '(underwater
                          spacemacs-dark
                          spacemacs-light
                          zenburn
@@ -63,7 +63,7 @@
                          )
    dotspacemacs-colorize-cursor-according-to-state nil
    dotspacemacs-default-font '("NanumGothicCoding"
-                               :size 14
+                               :size 16
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -122,6 +122,9 @@
   (setq-default js-indent-level 2)
   (setq-default js2-basic-offset 2)
 
+  ;; Toggles
+  (spacemacs/toggle-highlight-current-line-globally-off)
+
   ;; Disable ungainly line wrapping related indicators
   (setq-default fringe-indicator-alist
                 (assq-delete-all 'continuation
@@ -134,4 +137,3 @@
   (setq-default default-input-method "korean-hangul")
   (setq-default deft-directory "~/Dropbox/notes")
   )
-
