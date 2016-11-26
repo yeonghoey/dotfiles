@@ -21,7 +21,7 @@
      imenu-list
      javascript
      (markdown :variables markdown-live-preview-engine 'vmd)
-     org
+     (org :variables org-enable-github-support t)
      (python :variables python-test-runner 'pytest)
      (ranger :variables ranger-show-preview t)
      scala
