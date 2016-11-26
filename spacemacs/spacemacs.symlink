@@ -125,6 +125,7 @@
 
   ;; Org
   (setq-default org-startup-indented t)
+  (setq-default org-startup-folded nil)
 
   ;; Toggles
   (spacemacs/toggle-smartparens-globally-off)
