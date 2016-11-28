@@ -130,7 +130,7 @@
   (setq-default org-download-image-dir "./img")
   (setq-default org-download-annotate-function (lambda (x) nil))
   (setq-default org-download-screenshot-method
-                "ln -sF \"$(ls -dt $HOME/screenshots/* | head -n 1)\" %s")
+                "ln -sF \"$(ls -t $HOME/screenshots/* | head -n 1)\" %s")
   ;; Toggles
   (spacemacs/toggle-smartparens-globally-off)
 
