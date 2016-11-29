@@ -1,0 +1,2 @@
+#!/bin/bash
+"$DOTFILES_ROOT/python/venv/bin/python" "$DOTFILES_ROOT/python/ec2.py" "$1"
