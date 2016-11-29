@@ -123,7 +123,9 @@
   (setq-default js-indent-level 2)
   (setq-default js2-basic-offset 2)
 
-  ;; Org
+  ;; Org with deft
+  (setq-default deft-directory "~/Dropbox/notes")
+  (setq-default org-agenda-files (list "~/Dropbox/notes"))
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded nil)
   (setq-default org-download-method 'directory)
@@ -144,5 +146,4 @@
   (setq-default magit-diff-refine-hunk 'all)
   (setq-default ensime-startup-snapshot-notification nil)
   (setq-default default-input-method "korean-hangul")
-  (setq-default deft-directory "~/Dropbox/notes")
   )
