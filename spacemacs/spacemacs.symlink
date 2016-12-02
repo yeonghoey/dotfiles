@@ -124,6 +124,7 @@
   (setq-default js2-basic-offset 2)
 
   ;; Org with deft
+  (setq-default deft-extensions '("org"))
   (setq-default deft-directory "~/Dropbox/notes")
   (setq-default org-agenda-files (list "~/Dropbox/notes"))
   (setq-default org-startup-indented t)
