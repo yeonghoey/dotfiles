@@ -122,7 +122,7 @@
   (setq-default js-indent-level 2)
   (setq-default js2-basic-offset 2)
 
-  ;; org
+  ;; Org
   (setq org-directory "~/Dropbox/org")
   (let ((tasks-path (concat org-directory "/tasks.org"))
         )
@@ -131,8 +131,8 @@
          `(("t" "Tasks"
             entry (file+datetree ,tasks-path)
             "* TODO %?\n")
-           ("T" "Tasks (with ref)"
-            entry (file+datetree ,tasks-path)
+           ("T" "Tasks (advanced)"
+            entry (file+datetree+prompt ,tasks-path)
             "* TODO %?\n%i\n%a")))
    )
 
