@@ -128,18 +128,18 @@
   (setq org-capture-templates `(
    ("c" "Create notes"
     entry (file ,(format-time-string "%Y-%m-%d.org"))
-    "* TODO  %?"
-    :empty-lines 1 :jump-to-captured t)
+    "* TODO %?"
+    :empty-lines 1)
 
    ("e" "Create notes with example"
     entry (file ,(format-time-string "%Y-%m-%d.org"))
     "* TODO %?\n%a\n#+BEGIN_EXAMPLE\n%i\n#+END_EXAMPLE\n"
-    :empty-lines 1 :jump-to-captured t)
+    :empty-lines 1)
 
    ("s" "Create notes with source"
     entry (file ,(format-time-string "%Y-%m-%d.org"))
     "* TODO %?\n%a\n#+BEGIN_SRC %^{Language}\n%i \n#+END_SRC\n"
-    :empty-lines 1 :jump-to-captured t)
+    :empty-lines 1)
    ))
 
   (setq-default org-startup-indented t)
