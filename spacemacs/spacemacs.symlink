@@ -128,17 +128,17 @@
   (setq org-capture-templates `(
    ("c" "Create notes"
     entry (file ,(format-time-string "%Y-%m-%d.org"))
-    "* TODO %^{Title}\n%?"
+    "* TODO  %?"
     :empty-lines 1 :jump-to-captured t)
 
    ("e" "Create notes with example"
     entry (file ,(format-time-string "%Y-%m-%d.org"))
-    "* TODO %^{Title}\n%a\n#+BEGIN_EXAMPLE\n%i\n#+END_EXAMPLE\n%?"
+    "* TODO %?\n%a\n#+BEGIN_EXAMPLE\n%i\n#+END_EXAMPLE\n"
     :empty-lines 1 :jump-to-captured t)
 
    ("s" "Create notes with source"
     entry (file ,(format-time-string "%Y-%m-%d.org"))
-    "* TODO %^{Title}\n%a\n#+BEGIN_SRC %^{Language}\n%i \n#+END_SRC\n%?"
+    "* TODO %?\n%a\n#+BEGIN_SRC %^{Language}\n%i \n#+END_SRC\n"
     :empty-lines 1 :jump-to-captured t)
    ))
 
