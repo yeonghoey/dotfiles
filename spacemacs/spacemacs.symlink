@@ -11,7 +11,6 @@
      better-defaults
      command-log
      csv
-     deft
      docker
      emacs-lisp
      fasd
@@ -123,10 +122,20 @@
   (setq-default js-indent-level 2)
   (setq-default js2-basic-offset 2)
 
-  ;; Org with deft
-  (setq-default deft-extensions '("org"))
-  (setq-default deft-directory "~/Dropbox/notes")
-  (setq-default org-agenda-files (list "~/Dropbox/notes"))
+  ;; org
+  (setq org-directory "~/Dropbox/org")
+  (let ((tasks-path (concat org-directory "/tasks.org"))
+        )
+   (setq org-agenda-files `(,tasks-path))
+   (setq org-capture-templates
+         `(("t" "Tasks"
+            entry (file+datetree ,tasks-path)
+            "* TODO %?\n")
+           ("T" "Tasks (with ref)"
+            entry (file+datetree ,tasks-path)
+            "* TODO %?\n%i\n%a")))
+   )
+
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded nil)
   (setq-default org-download-method 'directory)
