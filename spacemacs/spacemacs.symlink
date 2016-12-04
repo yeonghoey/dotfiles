@@ -128,8 +128,8 @@
   (setq-default org-agenda-files `(,org-directory))
   (setq-default my-org-file (concat org-directory (format-time-string "/%Y-%m-%d.org")))
 
-  (setq-default org-todo-keywords '((sequence "TODO" "|" "DONE" "ABORTED")))
-  (setq-default org-todo-keyword-faces '(("ABORTED" . "DarkKhaki")))
+  (setq-default org-todo-keywords '((sequence "TODO" "|" "DONE" "CANCELED")))
+  (setq-default org-todo-keyword-faces '(("CANCELED" . "DarkKhaki")))
 
   (setq-default org-capture-templates `(
    ("c" "Create tasks"
