@@ -123,24 +123,42 @@
   (setq-default js2-basic-offset 2)
 
   ;; Org
-  (setq org-directory "~/Dropbox/org")
-  (setq org-agenda-files '("~/Dropbox/org"))
-  (setq org-capture-templates `(
+  ;; - Agenda settings
+  (setq-default org-directory "~/Dropbox/org")
+  (setq-default org-agenda-files `(,org-directory))
+  (defun my-org-file ()
+    (concat org-directory (format-time-string "/%Y-%m-%d.org")))
+
+  (setq-default org-capture-templates `(
    ("c" "Create notes"
-    entry (file ,(format-time-string "%Y-%m-%d.org"))
+    entry (file ,(my-org-file))
     "* TODO %?"
     :empty-lines 1)
-
    ("e" "Create notes with example"
-    entry (file ,(format-time-string "%Y-%m-%d.org"))
+    entry (file ,(my-org-file))
     "* TODO %?\n%a\n#+BEGIN_EXAMPLE\n%i\n#+END_EXAMPLE\n"
     :empty-lines 1)
-
    ("s" "Create notes with source"
-    entry (file ,(format-time-string "%Y-%m-%d.org"))
+    entry (file ,(my-org-file))
     "* TODO %?\n%a\n#+BEGIN_SRC %^{Language}\n%i \n#+END_SRC\n"
     :empty-lines 1)
    ))
+
+  (defun my-open-org-file ()
+    (interactive)
+    (find-file (my-org-file))
+    )
+  (defun my-ranger-org-file ()
+    (interactive)
+    (ranger (my-org-file))
+    )
+  (defun my-search-org-files ()
+    (interactive)
+    (spacemacs/helm-files-do-ag org-directory)
+    )
+  (spacemacs/set-leader-keys "oo" 'my-open-org-file)
+  (spacemacs/set-leader-keys "or" 'my-ranger-org-file)
+  (spacemacs/set-leader-keys "os" 'my-search-org-files)
 
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded nil)
