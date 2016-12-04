@@ -126,39 +126,47 @@
   ;; - Agenda settings
   (setq-default org-directory "~/Dropbox/org")
   (setq-default org-agenda-files `(,org-directory))
-  (defun my-org-file ()
-    (concat org-directory (format-time-string "/%Y-%m-%d.org")))
+  (setq-default my-org-file (concat org-directory (format-time-string "/%Y-%m-%d.org")))
 
   (setq-default org-capture-templates `(
-   ("c" "Create notes"
-    entry (file ,(my-org-file))
+   ("c" "Create tasks"
+    entry (file ,my-org-file)
     "* TODO %?"
     :empty-lines 1)
-   ("e" "Create notes with example"
-    entry (file ,(my-org-file))
+   ("e" "Create tasks with example"
+    entry (file ,my-org-file)
     "* TODO %?\n%a\n#+BEGIN_EXAMPLE\n%i\n#+END_EXAMPLE\n"
     :empty-lines 1)
-   ("s" "Create notes with source"
-    entry (file ,(my-org-file))
+   ("s" "Create tasks with source"
+    entry (file ,my-org-file)
     "* TODO %?\n%a\n#+BEGIN_SRC %^{Language}\n%i \n#+END_SRC\n"
     :empty-lines 1)
    ))
 
   (defun my-open-org-file ()
     (interactive)
-    (find-file (my-org-file))
-    )
-  (defun my-ranger-org-file ()
-    (interactive)
-    (ranger (my-org-file))
+    (find-file my-org-file)
     )
   (defun my-search-org-files ()
     (interactive)
     (spacemacs/helm-files-do-ag org-directory)
     )
+
+  (setq-default my-notes-directory "~/Dropbox/notes/")
+  (defun my-find-notes ()
+    (interactive)
+    (let ((default-directory my-notes-directory))
+      (spacemacs/helm-find-files nil))
+    )
+  (defun my-search-notes ()
+    (interactive)
+    (spacemacs/helm-files-do-ag my-notes-directory)
+    )
+
   (spacemacs/set-leader-keys "oo" 'my-open-org-file)
-  (spacemacs/set-leader-keys "or" 'my-ranger-org-file)
-  (spacemacs/set-leader-keys "os" 'my-search-org-files)
+  (spacemacs/set-leader-keys "oO" 'my-search-org-files)
+  (spacemacs/set-leader-keys "on" 'my-find-notes)
+  (spacemacs/set-leader-keys "oN" 'my-search-notes)
 
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded nil)
