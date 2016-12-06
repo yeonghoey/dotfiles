@@ -188,6 +188,8 @@
                   fringe-indicator-alist)))
 
   ;; Others
+  ;; Paste like vim in visual mode
+  (fset 'evil-visual-update-x-selection 'ignore)
   (setq-default magit-diff-refine-hunk 'all)
   (setq-default ensime-startup-snapshot-notification nil)
   (setq-default default-input-method "korean-hangul")
