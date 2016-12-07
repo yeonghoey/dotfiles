@@ -10,7 +10,6 @@ unbind C-b
 set -g base-index 1
 setw -g pane-base-index 1
 set -g detach-on-destroy off
-set -g remain-on-exit on
 
 # More readable status bar
 set -g status-left-length 40
