@@ -113,7 +113,6 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  (setq-default git-magit-status-fullscreen t)
   )
 
 (defun dotspacemacs/user-config ()
