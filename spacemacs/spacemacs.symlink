@@ -53,7 +53,7 @@
    dotspacemacs-startup-lists '()
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(deeperblue
+   dotspacemacs-themes '(deeper-blue
                          leuven
                          spacemacs-dark
                          spacemacs-light
