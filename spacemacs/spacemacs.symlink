@@ -36,7 +36,9 @@
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
-   dotspacemacs-excluded-packages '(exec-path-from-shell)
+   dotspacemacs-excluded-packages '(exec-path-from-shell
+                                    smartparens
+                                    )
    dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
@@ -179,8 +181,6 @@
   (setq-default org-download-annotate-function (lambda (x) nil))
   (setq-default org-download-screenshot-method
                 "ln -sfF \"$(ls -t $HOME/screenshots/* | head -n 1)\" %s")
-  ;; Toggles
-  (spacemacs/toggle-smartparens-globally-off)
 
   ;; Disable ungainly line wrapping related indicators
   (setq-default fringe-indicator-alist
