@@ -188,10 +188,15 @@
                 (assq-delete-all 'truncation
                   fringe-indicator-alist)))
 
-  ;; Others
   ;; Paste like vim in visual mode
   (fset 'evil-visual-update-x-selection 'ignore)
+
+  ;; Always follow symlinks
+  (setq-default vc-follow-symlinks t)
+
+  ;; Highlight hunks by characters
   (setq-default magit-diff-refine-hunk 'all)
-  (setq-default ensime-startup-snapshot-notification nil)
+
+  ;; Use Korean as a primary alternative language
   (setq-default default-input-method "korean-hangul")
   )
