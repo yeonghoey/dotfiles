@@ -25,8 +25,9 @@
      (ranger :variables ranger-show-preview t)
      scala
      (shell :variables
+            shell-enable-smart-eshell t
             shell-default-shell 'eshell
-            shell-default-height 30
+            shell-default-height 50
             shell-default-position 'bottom)
      shell-scripts
      spell-checking
