@@ -54,7 +54,8 @@
    dotspacemacs-startup-lists '()
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(deeper-blue
+   dotspacemacs-themes '(material
+                         material-light
                          leuven
                          spacemacs-dark
                          spacemacs-light
@@ -133,7 +134,8 @@
                                     (format-time-string "%Y-%m-%d.org")))
 
   (setq-default org-todo-keywords '((sequence "TODO" "NOTE" "|" "DONE" "ABORTED")))
-  (setq-default org-todo-keyword-faces '(("NOTE" . "SteelBlue") ("ABORTED" . "DarkKhaki")))
+  (setq-default org-todo-keyword-faces '(("NOTE" . (:foreground "SteelBlue"))
+                                         ("ABORTED" . (:foreground "DarkKhaki"))))
 
   (setq-default org-capture-templates `(
    ("c" "Create tasks"
