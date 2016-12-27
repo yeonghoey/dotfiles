@@ -91,11 +91,11 @@
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-helm-resize nil
    dotspacemacs-helm-no-header nil
-   dotspacemacs-helm-position 'bottom
+   dotspacemacs-helm-position 'left
    dotspacemacs-helm-use-fuzzy 'always
    dotspacemacs-enable-paste-transient-state nil
    dotspacemacs-which-key-delay 0.4
-   dotspacemacs-which-key-position 'bottom
+   dotspacemacs-which-key-position 'right-then-bottom
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
@@ -179,7 +179,7 @@
   (spacemacs/set-leader-keys "oN" 'my-search-notes)
 
   (setq-default org-startup-indented t)
-  (setq-default org-startup-folded t)
+  (setq-default org-startup-folded 'nofold)
   (setq-default org-download-method 'directory)
   (setq-default org-download-image-dir "./img")
   (setq-default org-download-heading-lvl nil)
