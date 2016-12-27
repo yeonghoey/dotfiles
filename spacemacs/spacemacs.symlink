@@ -100,8 +100,8 @@
    dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
-   dotspacemacs-active-transparency 90
-   dotspacemacs-inactive-transparency 90
+   dotspacemacs-active-transparency 75
+   dotspacemacs-inactive-transparency 75
    dotspacemacs-show-transient-state-title t
    dotspacemacs-show-transient-state-color-guide t
    dotspacemacs-mode-line-unicode-symbols nil
@@ -177,6 +177,7 @@
   (spacemacs/set-leader-keys "oO" 'my-search-org-files)
   (spacemacs/set-leader-keys "on" 'my-find-notes)
   (spacemacs/set-leader-keys "oN" 'my-search-notes)
+  (spacemacs/set-leader-keys "ot" 'spacemacs/toggle-transparency)
 
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded 'nofold)
