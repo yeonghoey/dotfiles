@@ -203,6 +203,7 @@
   ;; Highlight hunks by characters
   (setq-default magit-diff-refine-hunk 'all)
 
-  ;; Use Korean as a primary alternative language
+  ;; Korean language setting
   (setq-default default-input-method "korean-hangul")
+  (set-fontset-font t 'hangul (font-spec :name "NanumGothicCoding"))
   )
