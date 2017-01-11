@@ -4,7 +4,6 @@ export DOTFILES_ROOT=$HOME/.dotfiles
 DISABLE_AUTO_TITLE=true
 
 # Add ~/.linuxbrew to PATH
-#
 if [ "$(uname -s)" != "Darwin" ]; then
   export PATH="$HOME/.linuxbrew/bin:$PATH"
   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
@@ -21,13 +20,13 @@ config_files=($DOTFILES_ROOT/**/*.zsh)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
-  source $file
+  source "$file"
 done
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
-  source $file
+  source "$file"
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
@@ -37,16 +36,19 @@ compinit
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
-  source $file
+  source "$file"
 done
 
 unset config_files
 
-# load local configuration
+# local configurations
 if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
+
+mkdir -p "$HOME/bin"
+
 
 # load oh-my-zsh.
 # This should be at last because of order sensitive plugins
