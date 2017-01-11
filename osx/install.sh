@@ -5,7 +5,7 @@ fi
 echo "› sudo softwareupdate -i -a"
 sudo softwareupdate -i -a
 
-# Always open everything in Finder's list view. This is important.
+# Use Finder listview by default
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 brew bundle
