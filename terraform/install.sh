@@ -2,7 +2,7 @@
 
 set -e
 
-target_dir="$HOME/bin"
+target_dir="$HOME/.local/bin"
 mkdir -p "$target_dir"
 
 case "$(uname -s)" in
