@@ -52,11 +52,13 @@ def play_downloaded(filename):
     os.system(cmd)
 
 
+
 queries = [
     r'http://www.thesaurus.com/browse/{}',
-    r'http://www.google.com/search?tbm=isch&q={}+meaning',
+    r'http://www.google.com/search?tbm=isch&q={}',
     r'http://endic.naver.com/search.nhn?sLn=en&query={}',
     ]
+
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
@@ -68,5 +70,5 @@ if __name__ == '__main__':
         word = raw_input('refword> ')
         if not word.strip(): continue
         expron(word)
-        for q in queries:
-            os.system('open "{}"'.format(q.format(word)))
+        # for q in queries:
+        #     os.system('open "{}"'.format(q.format(word)))
