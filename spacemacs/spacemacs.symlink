@@ -173,11 +173,22 @@
     (spacemacs/helm-files-do-ag my-notes-directory)
     )
 
+  (defun my-trans-en-ko (start end)
+    (interactive "r")
+    (let* ((text (buffer-substring-no-properties start end))
+           (command (format "trans -b -to en+ko '%s'" text))
+           (output (shell-command-to-string command))
+           )
+      (kill-new output)
+      (message output))
+    )
+
   (spacemacs/set-leader-keys "oo" 'my-open-org-file)
   (spacemacs/set-leader-keys "oO" 'my-search-org-files)
   (spacemacs/set-leader-keys "on" 'my-find-notes)
   (spacemacs/set-leader-keys "oN" 'my-search-notes)
-  (spacemacs/set-leader-keys "ot" 'spacemacs/toggle-transparency)
+  (spacemacs/set-leader-keys "ot" 'my-trans-en-ko)
+  (spacemacs/set-leader-keys "oT" 'spacemacs/toggle-transparency)
 
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded 'nofold)
