@@ -175,7 +175,8 @@
 
   (defun my-trans-en-ko (start end)
     (interactive "r")
-    (let* ((text (buffer-substring-no-properties start end))
+    (let* ((selection (buffer-substring-no-properties start end))
+           (text (replace-regexp-in-string "[^[:alnum:]-_. ]" "" selection))
            (command (format "trans -b -to en+ko '%s'" text))
            (output (shell-command-to-string command))
            )
