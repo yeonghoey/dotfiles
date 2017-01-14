@@ -4,9 +4,10 @@ tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'd12frosted/emacs-plus'
 
+brew 'emacs-plus'
 brew 'ispell'
 brew 'node'
-brew 'emacs-plus'
+brew 'wget'
 
 cask 'java'
 cask 'iterm2'

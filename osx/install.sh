@@ -8,4 +8,4 @@ sudo softwareupdate -i -a
 # Use Finder listview by default
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
-brew bundle
+brew bundle --file=osx/Brewfile
