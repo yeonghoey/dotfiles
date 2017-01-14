@@ -2,9 +2,11 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
+tap 'd12frosted/emacs-plus'
 
 brew 'ispell'
 brew 'node'
+brew 'emacs-plus'
 
 cask 'java'
 cask 'iterm2'
