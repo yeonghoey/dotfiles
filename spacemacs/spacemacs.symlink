@@ -177,7 +177,7 @@
     (interactive "r")
     (let* ((selection (buffer-substring-no-properties start end))
            (text (replace-regexp-in-string "[^[:alnum:]-_. ]" "" selection))
-           (command (format "trans -b -to en+ko '%s'" text))
+           (command (format "trans -brief -to en+ko '%s'" text))
            (output (shell-command-to-string command))
            )
       (kill-new output)
