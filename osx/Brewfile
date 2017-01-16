@@ -5,7 +5,6 @@ tap 'caskroom/fonts'
 tap 'd12frosted/emacs-plus'
 
 brew 'emacs-plus'
-brew 'gawk'
 brew 'ispell'
 brew 'node'
 brew 'wget'
