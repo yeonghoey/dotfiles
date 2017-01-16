@@ -176,7 +176,7 @@
   (defun my-trans-en-ko (start end)
     (interactive "r")
     (let* ((text (buffer-substring-no-properties start end))
-           (command (format "trans -brief -to en+ko '%s'" text))
+           (command (format "trans -brief -no-autocorrect -to en+ko '%s'" text))
            (output (shell-command-to-string command))
            )
       (kill-new output)
