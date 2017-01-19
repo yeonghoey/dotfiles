@@ -129,11 +129,10 @@
   (setq-default js2-basic-offset 2)
 
   ;; Org
-  ;; - Agenda settings
   (setq-default org-directory "~/Dropbox/org/")
   (setq-default org-agenda-files `(,org-directory))
   (setq-default my-org-file (concat org-directory
-                                    (format-time-string "%Y-%m-%d.org")))
+                                    (format-time-string "%Y-%m.org")))
 
   (setq-default org-todo-keywords '((sequence "TODO" "NOTE" "|" "DONE" "ABORTED")))
   (setq-default org-todo-keyword-faces '(("NOTE" . (:foreground "SteelBlue"))
@@ -154,9 +153,10 @@
     :empty-lines 1)
    ))
 
-  (defun my-open-org-file ()
+  (defun my-find-org-files ()
     (interactive)
-    (find-file my-org-file)
+    (let ((default-directory org-directory))
+      (spacemacs/helm-find-files nil))
     )
   (defun my-search-org-files ()
     (interactive)
@@ -184,7 +184,7 @@
       (message output))
     )
 
-  (spacemacs/set-leader-keys "oo" 'my-open-org-file)
+  (spacemacs/set-leader-keys "oo" 'my-find-org-files)
   (spacemacs/set-leader-keys "oO" 'my-search-org-files)
   (spacemacs/set-leader-keys "on" 'my-find-notes)
   (spacemacs/set-leader-keys "oN" 'my-search-notes)
