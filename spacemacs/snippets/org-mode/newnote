@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: newnote
+# key: newnote_
+# --
+#+TITLE: ${1:title}
+
+* Table of Contents :TOC_2_gh:
+
+* $0
