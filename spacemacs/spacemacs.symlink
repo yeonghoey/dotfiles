@@ -7,7 +7,8 @@
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(auto-completion
+   '((auto-completion :variables
+                      auto-completion-private-snippets-directory "~/.dotfiles/spacemacs/snippets")
      better-defaults
      command-log
      csv
