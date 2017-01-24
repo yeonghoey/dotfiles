@@ -184,7 +184,7 @@
   (spacemacs/set-leader-keys "oT" 'spacemacs/toggle-transparency)
 
   (setq-default org-startup-indented t)
-  (setq-default org-startup-folded 'nofold)
+  (setq-default org-startup-folded t)
   (setq-default org-download-method 'directory)
   (setq-default org-download-image-dir "./img")
   (setq-default org-download-heading-lvl nil)
