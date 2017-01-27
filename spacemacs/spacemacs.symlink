@@ -124,6 +124,8 @@
   ;; Org
   (setq-default org-directory "~/Dropbox/org/")
   (setq-default org-agenda-files `(,org-directory))
+  (setq-default org-refile-targets '((org-agenda-files :level . 1)))
+  (setq-default org-refile-use-outline-path 'file)
   (setq-default my-org-file (concat org-directory "inbox.org"))
 
   (setq-default org-todo-keywords '((sequence "TODO" "NOTE" "|" "DONE" "ABORTED")))
