@@ -123,27 +123,25 @@
 
   ;; Org
   (setq-default org-directory "~/Dropbox/org/")
+  (setq-default my-org-inbox (concat org-directory "inbox.org"))
+  (setq-default my-org-work (concat org-directory "work.org"))
+
   (setq-default org-agenda-files `(,org-directory))
   (setq-default org-refile-targets '((org-agenda-files :level . 1)))
   (setq-default org-refile-use-outline-path 'file)
-  (setq-default my-org-file (concat org-directory "inbox.org"))
 
   (setq-default org-todo-keywords '((sequence "TODO" "NOTE" "|" "DONE" "ABORTED")))
   (setq-default org-todo-keyword-faces '(("NOTE" . (:foreground "SteelBlue"))
                                          ("ABORTED" . (:foreground "DarkKhaki"))))
 
   (setq-default org-capture-templates `(
-   ("c" "Create tasks"
-    entry (file ,my-org-file)
+   ("i" "Create a task (inbox)"
+    entry (file ,my-org-inbox)
     "* TODO %?"
     :empty-lines 1)
-   ("e" "Create tasks with example"
-    entry (file ,my-org-file)
-    "* TODO %?\n%a\n#+BEGIN_EXAMPLE\n%i\n#+END_EXAMPLE\n"
-    :empty-lines 1)
-   ("s" "Create tasks with source"
-    entry (file ,my-org-file)
-    "* TODO %?\n%a\n#+BEGIN_SRC %^{Language}\n%i \n#+END_SRC\n"
+   ("w" "Create a task (work)"
+    entry (file ,my-org-work)
+    "* TODO %?"
     :empty-lines 1)
    ))
 
@@ -160,6 +158,15 @@
       (spacemacs/helm-find-files nil))
     )
 
+  (defun my-find-org-inbox ()
+    (interactive)
+    (find-file my-org-inbox)
+    )
+  (defun my-find-org-work ()
+    (interactive)
+    (find-file my-org-work)
+    )
+
   (defun my-trans-en-ko (start end)
     (interactive "r")
     (let* ((text (buffer-substring-no-properties start end))
@@ -170,10 +177,14 @@
       (message output))
     )
 
-  (spacemacs/set-leader-keys "oo" 'my-find-org-files)
-  (spacemacs/set-leader-keys "oO" 'my-find-yeonghoey)
-  (spacemacs/set-leader-keys "ot" 'my-trans-en-ko)
-  (spacemacs/set-leader-keys "oT" 'spacemacs/toggle-transparency)
+  (spacemacs/set-leader-keys
+    "oo" 'my-find-org-files
+    "oO" 'my-find-yeonghoey
+    "oi" 'my-find-org-inbox
+    "ow" 'my-find-org-work
+    "ot" 'my-trans-en-ko
+    "oT" 'spacemacs/toggle-transparency
+    )
 
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded t)
