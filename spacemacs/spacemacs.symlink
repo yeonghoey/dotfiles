@@ -155,15 +155,15 @@
     (spacemacs/helm-files-do-ag org-directory)
     )
 
-  (setq-default my-notes-directory "~/Dropbox/notes/")
-  (defun my-find-notes ()
+  (setq-default my-yeonghoey-directory "~/Dropbox/yeonghoey/")
+  (defun my-find-yeonghoey ()
     (interactive)
-    (let ((default-directory my-notes-directory))
+    (let ((default-directory my-yeonghoey-directory))
       (spacemacs/helm-find-files nil))
     )
-  (defun my-search-notes ()
+  (defun my-search-yeonghoey ()
     (interactive)
-    (spacemacs/helm-files-do-ag my-notes-directory)
+    (spacemacs/helm-files-do-ag my-yeonghoey-directory)
     )
 
   (defun my-trans-en-ko (start end)
@@ -178,8 +178,8 @@
 
   (spacemacs/set-leader-keys "oo" 'my-find-org-files)
   (spacemacs/set-leader-keys "oO" 'my-search-org-files)
-  (spacemacs/set-leader-keys "on" 'my-find-notes)
-  (spacemacs/set-leader-keys "oN" 'my-search-notes)
+  (spacemacs/set-leader-keys "on" 'my-find-yeonghoey)
+  (spacemacs/set-leader-keys "oN" 'my-search-yeonghoey)
   (spacemacs/set-leader-keys "ot" 'my-trans-en-ko)
   (spacemacs/set-leader-keys "oT" 'spacemacs/toggle-transparency)
 
