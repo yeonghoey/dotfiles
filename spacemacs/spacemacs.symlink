@@ -145,47 +145,6 @@
     :empty-lines 1)
    ))
 
-  (defun my-find-org-files ()
-    (interactive)
-    (let ((default-directory org-directory))
-      (spacemacs/helm-find-files nil))
-    )
-
-  (setq-default my-yeonghoey-directory "~/Dropbox/yeonghoey/")
-  (defun my-find-yeonghoey ()
-    (interactive)
-    (let ((default-directory my-yeonghoey-directory))
-      (spacemacs/helm-find-files nil))
-    )
-
-  (defun my-find-org-inbox ()
-    (interactive)
-    (find-file my-org-inbox)
-    )
-  (defun my-find-org-work ()
-    (interactive)
-    (find-file my-org-work)
-    )
-
-  (defun my-trans-en-ko (start end)
-    (interactive "r")
-    (let* ((text (buffer-substring-no-properties start end))
-           (command (format "trans -brief -no-autocorrect -to en+ko \"%s\"" text))
-           (output (shell-command-to-string command))
-           )
-      (kill-new output)
-      (message output))
-    )
-
-  (spacemacs/set-leader-keys
-    "oo" 'my-find-org-files
-    "oO" 'my-find-yeonghoey
-    "oi" 'my-find-org-inbox
-    "ow" 'my-find-org-work
-    "ot" 'my-trans-en-ko
-    "oT" 'spacemacs/toggle-transparency
-    )
-
   (setq-default org-startup-indented t)
   (setq-default org-startup-folded t)
   (setq-default org-download-method 'directory)
@@ -213,4 +172,49 @@
   ;; Korean language setting
   (setq-default default-input-method "korean-hangul")
   (set-fontset-font t 'hangul (font-spec :name "NanumGothicCoding"))
+
+  ;; Custom commands bound to "SPC o"
+  (defun my-find-org-files ()
+    (interactive)
+    (let ((default-directory org-directory))
+      (spacemacs/helm-find-files nil))
+    )
+  (defun my-find-yeonghoey ()
+    (interactive)
+    (let ((default-directory "~/Dropbox/yeonghoey/"))
+      (spacemacs/helm-find-files nil))
+    )
+  (defun my-find-org-inbox ()
+    (interactive)
+    (find-file my-org-inbox)
+    )
+  (defun my-find-org-work ()
+    (interactive)
+    (find-file my-org-work)
+    )
+  (defun my-org-toggle-archived ()
+    (interactive)
+    (if (string-match "^.*[.]org$" buffer-file-name)
+        (find-file (concat buffer-file-name "_archive"))
+      (find-file (replace-regexp-in-string "_archive$" "" buffer-file-name))
+      )
+    )
+  (defun my-trans-en-ko (start end)
+    (interactive "r")
+    (let* ((text (buffer-substring-no-properties start end))
+           (command (format "trans -brief -no-autocorrect -to en+ko \"%s\"" text))
+           (output (shell-command-to-string command))
+           )
+      (kill-new output)
+      (message output))
+    )
+  (spacemacs/set-leader-keys
+    "oo" 'my-find-org-files
+    "oO" 'my-find-yeonghoey
+    "oa" 'my-org-toggle-archived
+    "oi" 'my-find-org-inbox
+    "ow" 'my-find-org-work
+    "ot" 'my-trans-en-ko
+    "oT" 'spacemacs/toggle-transparency
+    )
   )
