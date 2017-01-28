@@ -136,7 +136,7 @@
   (setq-default org-capture-templates `(
    ("c" "Create a task"
     entry (file ,my-org-inbox)
-    "* TODO %^{Title}\n\nCreated at %U\n\n%?"
+    "* TODO %?\n: Created at %U\n"
     :empty-lines 1)
    ))
 
