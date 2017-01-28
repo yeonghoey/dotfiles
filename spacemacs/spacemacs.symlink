@@ -183,7 +183,7 @@
     (interactive)
     (find-file my-org-inbox)
     )
-  (defun my-org-toggle-archived ()
+  (defun my-toggle-org-archived ()
     (interactive)
     (if (string-match "^.*[.]org$" buffer-file-name)
         (find-file (concat buffer-file-name "_archive"))
@@ -202,8 +202,8 @@
   (spacemacs/set-leader-keys
     "oo" 'my-find-org-files
     "oO" 'my-find-yeonghoey
-    "oa" 'my-org-toggle-archived
     "oi" 'my-find-org-inbox
+    "oa" 'my-toggle-org-archived
     "ot" 'my-trans-en-ko
     "oT" 'spacemacs/toggle-transparency
     )
