@@ -124,7 +124,6 @@
   ;; Org
   (setq-default org-directory "~/Dropbox/org/")
   (setq-default my-org-inbox (concat org-directory "inbox.org"))
-  (setq-default my-org-work (concat org-directory "work.org"))
 
   (setq-default org-agenda-files `(,org-directory))
   (setq-default org-refile-targets '((org-agenda-files :level . 1)))
@@ -135,13 +134,9 @@
                                          ("ABORTED" . (:foreground "DarkKhaki"))))
 
   (setq-default org-capture-templates `(
-   ("i" "Create a task (inbox)"
+   ("c" "Create a task"
     entry (file ,my-org-inbox)
-    "* TODO %?"
-    :empty-lines 1)
-   ("w" "Create a task (work)"
-    entry (file ,my-org-work)
-    "* TODO %?"
+    "* TODO %?\n%t"
     :empty-lines 1)
    ))
 
@@ -188,10 +183,6 @@
     (interactive)
     (find-file my-org-inbox)
     )
-  (defun my-find-org-work ()
-    (interactive)
-    (find-file my-org-work)
-    )
   (defun my-org-toggle-archived ()
     (interactive)
     (if (string-match "^.*[.]org$" buffer-file-name)
@@ -213,7 +204,6 @@
     "oO" 'my-find-yeonghoey
     "oa" 'my-org-toggle-archived
     "oi" 'my-find-org-inbox
-    "ow" 'my-find-org-work
     "ot" 'my-trans-en-ko
     "oT" 'spacemacs/toggle-transparency
     )
