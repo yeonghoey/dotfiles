@@ -169,19 +169,24 @@
   (set-fontset-font t 'hangul (font-spec :name "NanumGothicCoding"))
 
   ;; Custom commands bound to "SPC o"
-  (defun my-find-org-files ()
-    (interactive)
-    (let ((default-directory org-directory))
-      (spacemacs/helm-find-files nil))
-    )
+  (setq-default my-yeonghoey-directory "~/Dropbox/yeonghoey/")
   (defun my-find-yeonghoey ()
     (interactive)
-    (let ((default-directory "~/Dropbox/yeonghoey/"))
+    (let ((default-directory my-yeonghoey-directory))
       (spacemacs/helm-find-files nil))
+    )
+  (defun my-search-yeonghoey ()
+    (interactive)
+    (spacemacs/helm-files-do-ag my-yeonghoey-directory)
     )
   (defun my-find-org-inbox ()
     (interactive)
     (find-file my-org-inbox)
+    )
+  (defun my-find-org-files ()
+    (interactive)
+    (let ((default-directory org-directory))
+      (spacemacs/helm-find-files nil))
     )
   (defun my-toggle-org-archived ()
     (interactive)
@@ -200,9 +205,10 @@
       (message output))
     )
   (spacemacs/set-leader-keys
-    "oo" 'my-find-org-files
-    "oO" 'my-find-yeonghoey
+    "oo" 'my-find-yeonghoey
+    "oO" 'my-search-yeonghoey
     "oi" 'my-find-org-inbox
+    "oI" 'my-find-org-files
     "oa" 'my-toggle-org-archived
     "ot" 'my-trans-en-ko
     "oT" 'spacemacs/toggle-transparency
