@@ -169,7 +169,7 @@
   (set-fontset-font t 'hangul (font-spec :name "NanumGothicCoding"))
 
   ;; Custom commands bound to "SPC o"
-  (setq-default my-yeonghoey-directory "~/Dropbox/yeonghoey/")
+  (setq-default my-yeonghoey-directory "~/repos/yeonghoey/")
   (defun my-find-yeonghoey ()
     (interactive)
     (let ((default-directory my-yeonghoey-directory))
