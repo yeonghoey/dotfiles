@@ -1,5 +1,5 @@
 #!/bin/sh
 cd $DOTFILES_ROOT/python
 source venv/bin/activate
-python refword.py $HOME/Documents/Anki/hoey/collection.media
+python refword.py "$HOME/Library/Application Support/Anki2/hoey/collection.media"
 deactivate
