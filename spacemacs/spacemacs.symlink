@@ -16,6 +16,7 @@
      emacs-lisp
      fasd
      git
+     graphviz
      helm
      html
      imenu-list
