@@ -124,7 +124,7 @@
 
   ;; Python
   ;; SEE: https://github.com/timothycrosley/isort#multi-line-output-modes
-  (setq-default py-isort-options '("--multi_line 4"))
+  (setq-default py-isort-options '("-m 4"))
 
   ;; Org
   (setq-default org-directory "~/Dropbox/org/")
