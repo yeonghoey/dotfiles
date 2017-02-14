@@ -119,8 +119,12 @@
 (defun dotspacemacs/user-config ()
   ;; Indentations
   (setq-default sh-indentation 2)
+  (setq-default web-mode-markup-indent-offset 2)
+  (setq-default web-mode-code-indent-offset 2)
   (setq-default js-indent-level 2)
   (setq-default js2-basic-offset 2)
+  (setq-default web-mode-css-indent-offset 2)
+  (setq-default css-indent-offset 2)
 
   ;; Python
   ;; SEE: https://github.com/timothycrosley/isort#multi-line-output-modes
