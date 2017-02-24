@@ -1,9 +1,11 @@
 #!/bin/bash
 
-
 if [ "$(uname -s)" != "Darwin" ]; then
   dropbox.py start
 fi
+
+git -C "$HOME/repos/yeonghoey" pull
+git -C "$HOME/repos/notes" pull
 
 cd "$HOME/.dotfiles"
 git pull
