@@ -22,7 +22,9 @@
      imenu-list
      javascript
      (markdown :variables markdown-live-preview-engine 'vmd)
-     (org :variables org-enable-github-support t)
+     (org :variables
+          org-enable-github-support t
+          org-enable-reveal-js-support t)
      (python :variables python-test-runner 'pytest)
      (ranger :variables ranger-show-preview t)
      restclient
