@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: reveal
+# key: reveal_
+# --
+#+TITLE: ${1:title}
+#+AUTHOR:  ${2:author}
+
+#+OPTIONS: num:nil
+#+OPTIONS: timestamp:nil
+
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_HLEVEL: 2
+
+$0
