@@ -9,6 +9,7 @@
 #+OPTIONS: timestamp:nil
 
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_THEME: black
 #+REVEAL_HLEVEL: 2
 
 $0
