@@ -219,10 +219,10 @@
       (message output))
     )
   (spacemacs/set-leader-keys
-    "oo" 'my-find-yeonghoey
-    "oO" 'my-search-yeonghoey
-    "oi" 'my-find-org-inbox
-    "oI" 'my-find-org-files
+    "oy" 'my-find-yeonghoey
+    "oY" 'my-search-yeonghoey
+    "oo" 'my-find-org-inbox
+    "oO" 'my-find-org-files
     "oa" 'my-toggle-org-archived
     "ot" 'my-trans-en-ko
     "oT" 'spacemacs/toggle-transparency
