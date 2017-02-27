@@ -115,6 +115,8 @@
    ))
 
 (defun dotspacemacs/user-init ()
+  ;; OSX
+  (setq-default exec-path-from-shell-check-startup-files nil)
   )
 
 (defun dotspacemacs/user-config ()
