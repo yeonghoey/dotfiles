@@ -183,16 +183,6 @@
   (set-fontset-font t 'hangul (font-spec :name "NanumGothicCoding"))
 
   ;; Custom commands bound to "SPC o"
-  (setq-default my-yeonghoey-directory "~/repos/yeonghoey/")
-  (defun my-find-yeonghoey ()
-    (interactive)
-    (let ((default-directory my-yeonghoey-directory))
-      (spacemacs/helm-find-files nil))
-    )
-  (defun my-search-yeonghoey ()
-    (interactive)
-    (spacemacs/helm-files-do-ag my-yeonghoey-directory)
-    )
   (defun my-find-org-inbox ()
     (interactive)
     (find-file my-org-inbox)
@@ -219,8 +209,6 @@
       (message output))
     )
   (spacemacs/set-leader-keys
-    "oy" 'my-find-yeonghoey
-    "oY" 'my-search-yeonghoey
     "oo" 'my-find-org-inbox
     "oO" 'my-find-org-files
     "oa" 'my-toggle-org-archived
