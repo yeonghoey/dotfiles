@@ -119,6 +119,11 @@
   )
 
 (defun dotspacemacs/user-config ()
+  ;; Show file's full path on title bar
+  (setq-default frame-title-format
+        '((:eval (if (buffer-file-name)
+                     (abbreviate-file-name (buffer-file-name))
+                   "%b"))))
   ;; Indentations
   (setq-default sh-indentation 2)
   (setq-default web-mode-markup-indent-offset 2)
