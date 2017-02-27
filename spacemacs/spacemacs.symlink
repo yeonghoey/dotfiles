@@ -16,6 +16,7 @@
      emacs-lisp
      fasd
      git
+     go
      graphviz
      helm
      html
@@ -42,9 +43,7 @@
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
-   dotspacemacs-excluded-packages '(exec-path-from-shell
-                                    smartparens
-                                    )
+   dotspacemacs-excluded-packages '(smartparens)
    dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
