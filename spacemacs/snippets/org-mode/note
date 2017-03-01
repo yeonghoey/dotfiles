@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: note
-# key: note_
-# --
-#+TITLE: ${1:title}
-
-* Table of Contents :TOC_2_gh:
-
-$0
