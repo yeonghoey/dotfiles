@@ -144,7 +144,6 @@
 
   (setq-default org-agenda-files `(,org-directory))
   (setq-default org-refile-targets '((org-agenda-files :level . 1)))
-  (setq-default org-refile-use-outline-path 'file)
 
   (setq-default org-todo-keywords '((sequence "TODO" "NOTE" "|" "DONE" "ABORTED")))
   (setq-default org-todo-keyword-faces '(("NOTE" . (:foreground "SteelBlue"))
@@ -152,8 +151,8 @@
 
   (setq-default org-capture-templates `(
    ("c" "Create a task"
-    entry (file ,my-org-inbox)
-    "* TODO %?\n: Created at %U\n"
+    plain (file ,my-org-inbox)
+    "** TODO %?\n: Created at %U\n"
     :empty-lines 1)
    ))
 
