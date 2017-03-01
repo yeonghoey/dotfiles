@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [ "$(uname -s)" != "Darwin" ]; then
+if [[ "$(uname)" == "Linux" ]]; then
   dropbox.py start
 fi
 
-git -C "$HOME/.dotfiles" pull
-git -C "$HOME/.spacemacs.d" pull
 git -C "$HOME/repos/yeonghoey" pull
 git -C "$HOME/repos/notes" pull
+git -C "$HOME/.spacemacs.d" pull
+git -C "$HOME/.dotfiles" pull
 
 emacs &
