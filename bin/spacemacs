@@ -4,10 +4,20 @@ if [[ "$(uname)" == "Linux" ]]; then
   dropbox.py start
 fi
 
-set -x
+echo 'Sync yeonghoey'
 git -C "$HOME/repos/yeonghoey" pull
+echo
+
+echo 'Sync notes'
 git -C "$HOME/repos/notes" pull
+echo
+
+echo 'Sync .spacemacs.d'
 git -C "$HOME/.spacemacs.d" pull
+echo
+
+echo 'Sync .dotfiles'
 git -C "$HOME/.dotfiles" pull
+echo
 
 emacs &
