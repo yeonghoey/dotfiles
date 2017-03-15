@@ -4,6 +4,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   dropbox.py start
 fi
 
+set -x
 git -C "$HOME/repos/yeonghoey" pull
 git -C "$HOME/repos/notes" pull
 git -C "$HOME/.spacemacs.d" pull
