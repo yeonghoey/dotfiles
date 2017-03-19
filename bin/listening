@@ -2,7 +2,9 @@
 
 ankidir="$HOME/Library/Application Support/Anki2/hoey/collection.media"
 inpath="$1"
+ss="$2"
+to="$3"
 
 cd $DOTFILES_ROOT/python
 source venv/bin/activate
-python listening.py "$ankidir" "$inpath"
+python listening.py "$ankidir" "$inpath" "$ss" "$to"
