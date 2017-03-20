@@ -4,20 +4,15 @@ if [[ "$(uname)" == "Linux" ]]; then
   dropbox.py start
 fi
 
-echo 'Pull yeonghoey'
-git -C "$HOME/repos/yeonghoey" pull
-echo
+pull () {
+  echo "Pull \"$1\""
+  git -C "$1" pull
+  echo
+}
 
-echo 'Pull notes'
-git -C "$HOME/repos/notes" pull
-echo
-
-echo 'Pull .spacemacs.d'
-git -C "$HOME/.spacemacs.d" pull
-echo
-
-echo 'Pull .dotfiles'
-git -C "$HOME/.dotfiles" pull
-echo
+pull "$HOME/repos/yeonghoey"
+pull "$HOME/repos/notes"
+pull "$HOME/.spacemacs.d"
+pull "$HOME/.dotfiles"
 
 emacs &
