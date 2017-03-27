@@ -1,3 +1,3 @@
 #!/bin/bash
 
-open "http://sfrom.net/$(pbpaste)"
+open "http://sfrom.net/$1"
