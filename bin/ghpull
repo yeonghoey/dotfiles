@@ -1,9 +1,7 @@
 #!/bin/bash
 
 pull () {
-  echo "Pull \"$1\""
-  git -C "$1" pull
-  echo
+  git -C "$1" pull > /dev/null || echo "Failed to pull \"$1\""
 }
 
 pull "$HOME/repos/yeonghoey"
