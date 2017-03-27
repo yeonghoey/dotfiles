@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pull () {
+  echo "Pull \"$1\""
+  git -C "$1" pull
+  echo
+}
+
+pull "$HOME/repos/yeonghoey"
+pull "$HOME/repos/notes"
+pull "$HOME/.spacemacs.d"
+pull "$HOME/.dotfiles"
