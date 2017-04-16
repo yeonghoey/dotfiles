@@ -9,6 +9,7 @@ import clipboard
 
 
 def main(ankidir, inpath, ss, to):
+    inpath = os.path.abspath(inpath)
     if not os.path.exists(inpath):
         print('"%s" not exsisting' % inpath, file=sys.stderr)
         exit(1)
