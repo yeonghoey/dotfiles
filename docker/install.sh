@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Only install settings when docker-machine available.
 if test ! $(which docker-machine); then exit 0; fi
