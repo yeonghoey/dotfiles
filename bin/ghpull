@@ -1,10 +1,11 @@
 #!/bin/bash
 
 pull () {
+  git -C "$1" lfs pull > /dev/null || echo "Failed to lfs pull \"$1\""
   git -C "$1" pull > /dev/null || echo "Failed to pull \"$1\""
 }
 
-pull "$HOME/repos/yeonghoey"
-pull "$HOME/repos/notes"
 pull "$HOME/.spacemacs.d"
 pull "$HOME/.dotfiles"
+pull "$HOME/repos/yeonghoey"
+pull "$HOME/repos/notes"
