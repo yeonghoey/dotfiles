@@ -4,7 +4,6 @@ pull () {
   git -C "$1" pull > /dev/null || echo "Failed to pull \"$1\""
 }
 
-pull "$HOME/.spacemacs.d"
 pull "$HOME/.dotfiles"
-pull "$HOME/repos/yeonghoey"
+pull "$HOME/.spacemacs.d"
 pull "$HOME/repos/notes"
