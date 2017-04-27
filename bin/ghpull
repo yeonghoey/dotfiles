@@ -1,7 +1,6 @@
 #!/bin/bash
 
 pull () {
-  git -C "$1" lfs pull > /dev/null || echo "Failed to lfs pull \"$1\""
   git -C "$1" pull > /dev/null || echo "Failed to pull \"$1\""
 }
 
