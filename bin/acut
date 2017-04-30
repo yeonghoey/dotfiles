@@ -7,4 +7,4 @@ to="$3"
 
 cd $DOTFILES_ROOT/python
 source venv/bin/activate
-python listening.py "$ankidir" "$inpath" "$ss" "$to"
+python acut.py "$ankidir" "$inpath" "$ss" "$to"
