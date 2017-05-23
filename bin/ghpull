@@ -6,6 +6,6 @@ pull () {
 
 pull "$HOME/.dotfiles"
 pull "$HOME/.spacemacs.d"
-
-pull "$HOME/repos/notes"
-git -C "$HOME/repos/notes" lfs pull
+pull "$HOME/org"
+pull "$HOME/notes"
+git -C "$HOME/notes" lfs pull
