@@ -1,8 +1,4 @@
 #!/bin/bash
 
-if [[ "$(uname)" == "Linux" ]]; then
-  dropbox.py start
-fi
-
 ghpull
 emacs &
