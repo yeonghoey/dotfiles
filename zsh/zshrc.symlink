@@ -4,13 +4,6 @@ export LOCALBIN="$HOME/.local/bin"
 # AUTO_TITLE is annoying.  Disable for just showing program names.
 DISABLE_AUTO_TITLE=true
 
-# Add ~/.linuxbrew to PATH
-# if [ "$(uname -s)" != "Darwin" ]; then
-#   export PATH="$HOME/.linuxbrew/bin:$PATH"
-#   export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-#   export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-# fi
-
 # autoload contents of functions
 autoload -U $DOTFILES_ROOT/functions/*(:t)
 
