@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM="$ZSH/custom"
 
-ZSH_THEME='afowler'
+ZSH_THEME='theunraveler'
 plugins=(git colorize zsh-autosuggestions osx zsh-navigation-tools \
     zsh-syntax-highlighting) # syntax-highlighting should be at last
 
@@ -28,5 +28,3 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 # ----------------------------------------------------------------------------
-
-bindkey '^ ' autosuggest-accept
