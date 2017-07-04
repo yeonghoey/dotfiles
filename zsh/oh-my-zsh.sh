@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM="$ZSH/custom"
 
-ZSH_THEME='theunraveler'
+ZSH_THEME='af-magic'
 plugins=(git colorize osx zsh-navigation-tools \
     zsh-syntax-highlighting) # syntax-highlighting should be at last
 
